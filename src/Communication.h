@@ -19,10 +19,10 @@
 // #include "CommunicationConfiguration.h"
 // #include "LogConfiguration.h"
 
-#include "CircularBuffer.h"
-#include "Network.h"
-#include "myJSON.h"
-#include "myMQTT.h"
+#include <CircularBuffer.h>
+#include "Network/Network.h"
+#include "myJSON/myJSON.h"
+#include "myMQTT/myMQTT.h"
 
 /**
 * @brief If the client is used to subscribe to topics,
