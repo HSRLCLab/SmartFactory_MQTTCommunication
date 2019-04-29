@@ -17,48 +17,34 @@ myJSON::myJSON() {
 }
 
 bool myJSON::StructIsEqual(const myJSONStr& lhs, const myJSONStr& rhs) {
-    DBINFO3("sensor: ");
-    DBINFO3(lhs.sensor);
-    DBINFO3(" / ");
-    DBINFO3ln(rhs.sensor);
+    DBFUNCCALLln("myJSON::StructIsEqual(...)");
+    DBINFO3ln(String("sensor: ") + String(lhs.sensor) + String(" / ") + String(rhs.sensor));
     if (!(lhs.sensor == rhs.sensor)) {
-        DBINFO3("sensor diffrent");
+        DBINFO3ln("sensor diffrent");
         return false;
     }
-
-    DBINFO3("time: ");
-    DBINFO3(lhs.time);
-    DBINFO3(" / ");
-    DBINFO3ln(rhs.time);
+    DBINFO3ln(String("time: ") + String(lhs.time) + String(" / ") + String(rhs.time));
     if (!(lhs.time == rhs.time)) {
-        DBINFO1ln("time diffrent");
+        DBINFO3ln("time diffrent");
         return false;
     }
-
-    DBINFO3("data[0]: ");
-    DBINFO3(lhs.data[0]);
-    DBINFO3(" / ");
-    DBINFO3ln(rhs.data[0]);
+    DBINFO3ln(String("data[0]: ") + String(lhs.data[0]) + String(" / ") + String(rhs.data[0]));
     if (!(lhs.data[0] == rhs.data[0])) {
         DBINFO3ln("data[0] diffrent");
         return false;
     }
-
-    DBINFO3("data[1]: ");
-    DBINFO3(lhs.data[1]);
-    DBINFO3(" / ");
-    DBINFO3ln(rhs.data[1]);
+    DBINFO3ln(String("data[1]: ") + String(lhs.data[1]) + String(" / ") + String(rhs.data[1]));
     if (!(lhs.data[1] == rhs.data[1])) {
         DBINFO3ln("data[1] diffrent");
         return false;
     }
-    DBINFO2ln("Structs are the same");
+    DBINFO3ln("Structs are the same");
     return true;
 }
 
 myJSONStr myJSON::parsingJSONToStruct(const char* json) {
     DBFUNCCALLln("myJSON::parsingJSONToStruct(const char* json)");
-    DBINFO2ln(json);
+    DBINFO3ln(json);
     myJSONStr tempStr;
     DynamicJsonDocument doc(pParsCapacity);
 

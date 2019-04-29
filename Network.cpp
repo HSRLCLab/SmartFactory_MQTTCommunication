@@ -26,22 +26,21 @@ void Network::init() {
     if (WiFi.status() == WL_NO_SHIELD) {  // check if the shield is presence
         DBERROR("NO WiFi shield present");
         DBERROR("WiFi Library could not find WiFi shield. " + decodeWiFistate(WiFi.status()));
-        DBINFO2ln("programm is not continuing");
+        DBINFO3ln("programm is not continuing");
         while (true) {
             // don't continue
         }
     }
-    DBINFO2("WiFi Firmware Version = ");
-    DBINFO2ln(WiFi.firmwareVersion());
+    DBINFO3ln(String("WiFi Firmware Version = ") + String(WiFi.firmwareVersion()));
     connectToWiFi();
 }
 
 void Network::connectToWiFi() {
     DBFUNCCALLln("Network::connectToWiFi()");
     while (WiFi.status() != WL_CONNECTED) {  // connect to Wifi network
-        DBINFO1ln("Status:  " + decodeWiFistate(WiFi.status()));
-        DBINFO2ln("Attempting WLAN connection (WEP)...");
-        DBINFO2ln("SSID: " + pSsid);
+        DBSTATUS("Status:  " + decodeWiFistate(WiFi.status()));
+        DBINFO3ln("Attempting WLAN connection (WEP)...");
+        DBINFO3ln("SSID: " + pSsid);
         // DBINFO1ln("PW: " + pPassword);
         if (WiFi.begin(pSsid, pPassword) != WL_CONNECTED) {
             DBERROR("WLAN connection failed");
