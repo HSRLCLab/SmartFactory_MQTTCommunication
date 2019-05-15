@@ -9,6 +9,8 @@
  * @date 2019-04-09
  * @copyright Copyright (c) 2019
  * 
+ * @todo Update to official library standart arduino https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5:-Library-specification
+ * 
  */
 
 #ifndef COMMUNICATION_H__
@@ -171,6 +173,16 @@ class Communication {
     }
 
     /**
+     * @brief Get the Element object
+     * 
+     * @param x - 
+     * @return myJSONStr - 
+     */
+    inline myJSONStr getElement(int x) {
+        return _buffer[x];
+    }
+
+    /**
      * @brief Retriev data from the Tail (oldest Element) of the Buffer
      * 
      * Cause the element being read to be removed from the buffer
@@ -191,26 +203,26 @@ class Communication {
         return _buffer.isEmpty();
     }
 
-    // /**
-    //  * @brief Retriev data from the Head (newest Element) of the Buffer
-    //  *
-    //  * This operation is non destructiv and the element will NOT be removed from the buffer
-    //  * Reading from an empty buffer is forbidden!!
-    //  * @return myJSONStr - The Element at the Head
-    //  */
-    // inline myJSONStr first() {
-    //     return _buffer.first();
-    // }
-    // /**
-    //  * @brief Retriev data from the Head (newest Element) of the Buffer
-    //  *
-    //  * Cause the element being read to be removed from the buffer
-    //  * Reading from an empty buffer is forbidden!!
-    //  * @return myJSONStr - The Element at the Head
-    //  */
-    // inline myJSONStr shift() {
-    //     return _buffer.shift();
-    // }
+    /**
+     * @brief Retriev data from the Head (newest Element) of the Buffer
+     *
+     * This operation is non destructiv and the element will NOT be removed from the buffer
+     * Reading from an empty buffer is forbidden!!
+     * @return myJSONStr - The Element at the Head
+     */
+    inline myJSONStr first() {
+        return _buffer.first();
+    }
+    /**
+     * @brief Retriev data from the Head (newest Element) of the Buffer
+     *
+     * Cause the element being read to be removed from the buffer
+     * Reading from an empty buffer is forbidden!!
+     * @return myJSONStr - The Element at the Head
+     */
+    inline myJSONStr shift() {
+        return _buffer.shift();
+    }
 
     /**
      * @brief  returns the number of elements currently stored in the buffer

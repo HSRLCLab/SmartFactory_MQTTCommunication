@@ -52,17 +52,24 @@ void callback(char* topic, byte* payload, unsigned int length) {
         //https://stackoverflow.com/questions/1360183/how-do-i-call-a-non-static-method-from-a-static-method-in-c
         myJSONStr newMessage = _myjson.parsingJSONToStruct((char*)payload_str);
         newMessage.topic = topic_str;
+        DBINFO3("ID: ");
+        DBINFO3ln(newMessage.id);
         DBINFO3("Topic: ");
         DBINFO3ln(newMessage.topic);
-        DBINFO3("Sensor: ");
-        DBINFO3ln(newMessage.sensor);
-        DBINFO3("Time: ");
-        DBINFO3ln(newMessage.time);
-        DBINFO3("data_0: ");
-        DBINFO3ln(newMessage.data[0]);
-        DBINFO3("data_1: ");
-        DBINFO3ln(newMessage.data[1]);
-        DBINFO3ln(_buffer.size());
+        DBINFO3("Status: ");
+        DBINFO3ln(newMessage.status);
+        DBINFO3("sector: ");
+        DBINFO3ln(newMessage.sector);
+        DBINFO3("line: ");
+        DBINFO3ln(newMessage.line);
+        DBINFO3("ack: ");
+        DBINFO3ln(newMessage.ack);
+        DBINFO3("req: ");
+        DBINFO3ln(newMessage.req);
+        DBINFO3("cargo: ");
+        DBINFO3ln(newMessage.cargo);
+        DBINFO3("error: ");
+        DBINFO3ln(newMessage.error);
         // _myjson.StructIsEqual(newMessage, _buffer.first()); //bug this calls changes the message chars somehow?
         _buffer.unshift(newMessage);
         _myjson.lastMessage = currentMessage;
@@ -70,4 +77,5 @@ void callback(char* topic, byte* payload, unsigned int length) {
 }
 
 Communication::Communication() {
+    init();
 }
