@@ -67,6 +67,7 @@ myJSONStr myJSON::parsingJSONToStruct(const char* json) {
         tempStr.ack = doc["ack"].as<String>();        // "hostname"
         tempStr.req = doc["req"].as<String>();        // "hostname"
         tempStr.cargo = doc["cargo"].as<String>();    // "gemuse"
+        tempStr.token = doc["token"].as<bool>();      // false
         tempStr.error = doc["error"].as<bool>();      // false
 
         // tempStr.sensor = doc["sensor"].as<String>();   // "gps"
