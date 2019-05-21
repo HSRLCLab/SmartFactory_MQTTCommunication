@@ -70,6 +70,8 @@ void callback(char* topic, byte* payload, unsigned int length) {
         DBINFO3ln(newMessage.cargo);
         DBINFO3("error: ");
         DBINFO3ln(newMessage.error);
+        DBINFO3("token: ");
+        DBINFO3ln(newMessage.token);
         // _myjson.StructIsEqual(newMessage, _buffer.first()); //bug this calls changes the message chars somehow?
         _buffer.unshift(newMessage);
         _myjson.lastMessage = currentMessage;
