@@ -91,7 +91,7 @@ bool myMQTT::unsubscribe(const String topic) {
 
 bool myMQTT::publishMessage(const String topic, const String msg) {  // publishes a message to the server
     DBFUNCCALLln("myMQTT::publishMessage(const String topic, const String msg)");
-    DBINFO3ln("try to publish to[" + topic + "] message: " + msg);
+    // DBINFO3ln("try to publish to[" + topic + "] message: " + msg);
     connectToMQTT();
     if (myMQTTclient.connected()) {
         if (myMQTTclient.publish(topic.c_str(), msg.c_str())) {
