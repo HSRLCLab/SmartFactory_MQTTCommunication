@@ -16,9 +16,9 @@
     "export": {
         "include": null,
         "exclude": [
-            "doxygen",
-            "docs",
-            "test"
+            "doxygen/*",
+            "docs/*",
+            "test/*"
         ]
     },
     "dependencies": [
