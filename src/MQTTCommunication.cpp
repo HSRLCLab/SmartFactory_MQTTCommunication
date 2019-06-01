@@ -1,5 +1,5 @@
 /**
- * @file Communication.cpp
+ * @file MQTTCommunication.cpp
  * @brief Implementation of the Connection class
  *
  * @author Luca Mazzoleni (luca.mazzoleni@hsr.ch)
@@ -19,7 +19,7 @@ https://arduinodiy.wordpress.com/2017/07/30/json-mqtt-and-openhab/
 https://assetwolf.com/learn/sending-data-from-arduino-to-cloud
 */
 
-#include "Communication.h"
+#include "MQTTCommunication.h"
 
 //==Global Vairable====
 myJSON _myjson;                                              ///< instance of myJSON

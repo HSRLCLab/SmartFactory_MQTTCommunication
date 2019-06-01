@@ -19,7 +19,7 @@
 #include "CommunicationConfiguration.h"
 #include "LogConfiguration.h"
 
-#include "Network.h"
+#include "Network/Network.h"
 // #include <WiFi101.h>
 #include <PubSubClient.h>
 

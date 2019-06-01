@@ -1,5 +1,5 @@
 /**
- * @file Communication.h
+ * @file MQTTCommunication.h
  * @brief The Connection-class is used as interface
  * 
  * @author Luca Mazzoleni (luca.mazzoleni@hsr.ch)
@@ -13,8 +13,8 @@
  * 
  */
 
-#ifndef COMMUNICATION_H__
-#define COMMUNICATION_H__
+#ifndef MQTTCOMMUNICATION_H__
+#define MQTTCOMMUNICATION_H__
 
 #include "Arduino.h"
 
@@ -22,9 +22,9 @@
 // #include "LogConfiguration.h"
 
 #include <CircularBuffer.h>
-#include "Network.h"
-#include "myJSON.h"
-#include "myMQTT.h"
+#include "Network/Network.h"
+#include "myJSON/myJSON.h"
+#include "myMQTT/myMQTT.h"
 
 /**
 * @brief If the client is used to subscribe to topics,
