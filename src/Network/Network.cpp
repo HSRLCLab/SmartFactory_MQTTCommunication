@@ -14,15 +14,17 @@
 #include "Network.h"
 //=====PUBLIC====================================================================================
 
-Network::Network() : pSsid(DEFAULT_WIFI_SSID), pPassword(DEFAULT_WIFI_PASSWORD) {
-}
-
-Network::Network(String ssid, String password) : pSsid(ssid), pPassword(password) {
+Network::Network(String ssid, String password, int WIFI_CS, int WIFI_IRQ, int WIFI_RST, int WIFI_EN) : pSsid(ssid),
+                                                                                                       pPassword(password),
+                                                                                                       pWifi_CS(WIFI_CS),
+                                                                                                       pWiFi_IRQ(WIFI_IRQ),
+                                                                                                       pWifi_RST(WIFI_RST),
+                                                                                                       pWifi_EN(WIFI_EN) {
 }
 
 void Network::init() {
     DBFUNCCALLln("Network::init()");
-    WiFi.setPins(DEFAULT_WIFI_CS, DEFAULT_WIFI_IRQ, DEFAULT_WIFI_RST, DEFAULT_WIFI_EN);
+    WiFi.setPins(pWifi_CS, pWiFi_IRQ, pWifi_RST, pWifi_EN);
     if (WiFi.status() == WL_NO_SHIELD) {  // check if the shield is presence
         DBERROR("NO WiFi shield present");
         DBERROR("WiFi Library could not find WiFi shield. " + decodeWiFistate(WiFi.status()));

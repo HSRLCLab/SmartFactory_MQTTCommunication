@@ -16,23 +16,6 @@
 #include "myMQTT.h"
 
 //=====PUBLIC====================================================================================
-
-myMQTT::myMQTT() : myMQTT(DEFAULT_HOSTNAME,
-                          DEFAULT_MQTT_BROKER_IP1,
-                          DEFAULT_MQTT_BROKER_IP2,
-                          DEFAULT_MQTT_BROKER_IP3,
-                          DEFAULT_MQTT_BROKER_IP4,
-                          DEFAULT_MQTT_PORT) {
-}
-
-myMQTT::myMQTT(String hostname) : myMQTT(hostname,
-                                         DEFAULT_MQTT_BROKER_IP1,
-                                         DEFAULT_MQTT_BROKER_IP2,
-                                         DEFAULT_MQTT_BROKER_IP3,
-                                         DEFAULT_MQTT_BROKER_IP4,
-                                         DEFAULT_MQTT_PORT) {
-}
-
 myMQTT::myMQTT(String hostname,
                const int BrokerIP1,
                const int BrokerIP2,

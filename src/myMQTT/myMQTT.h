@@ -16,7 +16,6 @@
 
 #include "Arduino.h"
 
-#include "CommunicationConfiguration.h"
 #include "LogConfiguration.h"
 
 #include "Network/Network.h"
@@ -31,22 +30,6 @@
 class myMQTT {
     //=====PUBLIC====================================================================================
    public:
-    /**
-    * @brief Construct a new my M Q T T object
-    * 
-    * Sets hostname, BrokerIP and BrokerPort from Communication-Config file
-    */
-    myMQTT();
-
-    /**
-     * @brief Construct a new my M Q T T object
-     * 
-     * Sets BrokerIP and BrokerPort from Communication-Config file
-     * 
-     * @param hostname - the client ID to use when connecting to the server
-     */
-    myMQTT(String hostname);
-
     /**
      * @brief Construct a new my M Q T T object
      * 

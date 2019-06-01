@@ -18,7 +18,7 @@
 
 #include "Arduino.h"
 
-// #include "CommunicationConfiguration.h"
+#include "CommunicationConfiguration.h"
 // #include "LogConfiguration.h"
 
 #include <CircularBuffer.h>
@@ -74,7 +74,7 @@ class Communication {
     * @brief Construct a new Communication object
     * 
     */
-    Communication();
+    Communication(String Hostname);
 
     //==INTERFACE===================================
     /**
@@ -242,9 +242,23 @@ class Communication {
     }
 
    private:
-    WiFiClient pClient;                                                   ///< instance of WiFiClient
-    Network pNetwork;                                                     ///< instance of Network
-    myMQTT pMymqtt;                                                       ///< instance of myMQTT
+    String pHostname;
+    WiFiClient pClient = WiFiClient();  ///< instance of WiFiClient
+    Network pNetwork= Network(DEFAULT_WIFI_SSID,
+                     DEFAULT_WIFI_PASSWORD,
+                     DEFAULT_WIFI_CS,
+                     DEFAULT_WIFI_IRQ,
+                     DEFAULT_WIFI_RST,
+                     DEFAULT_WIFI_EN);  ///< instance of Network
+    myMQTT pMymqtt= myMQTT(pHostname,
+                   DEFAULT_MQTT_BROKER_IP1,
+                   DEFAULT_MQTT_BROKER_IP2,
+                   DEFAULT_MQTT_BROKER_IP3,
+                   DEFAULT_MQTT_BROKER_IP4,
+                   DEFAULT_MQTT_PORT);
+    // WiFiClient pClient;                                                   ///< instance of WiFiClient
+    // Network pNetwork;                                                     ///< instance of Network
+    // myMQTT pMymqtt;                                                       ///< instance of myMQTT
     void (*funcPointer)(char*, unsigned char*, unsigned int) = callback;  ///< functionpointer to callback-function
 };
 #endif

@@ -18,7 +18,6 @@
 
 #include "Arduino.h"
 
-#include "CommunicationConfiguration.h"
 #include "LogConfiguration.h"
 
 #include <SPI.h>
@@ -31,19 +30,17 @@
 class Network {
     //=====PUBLIC====================================================================================
    public:
-    /**
-    * @brief Construct a new Network object
-    * Sets ssid and password from Communication-Config file
-    */
-    Network();
-
-    /**
+       /**
      * @brief Construct a new Network object
      * 
-     * @param ssid - SSID of the WLan you would like to connect
+     * @param ssid -  SSID of the WLan you would like to connect
      * @param password - Password of the desired WLAN
+     * @param WIFI_CS - 
+     * @param WIFI_IRQ - 
+     * @param WIFI_RST - 
+     * @param WIFI_EN - 
      */
-    Network(String ssid, String password);
+    Network(String ssid, String password, int WIFI_CS, int WIFI_IRQ, int WIFI_RST, int WIFI_EN);
 
     /**
      * @brief Intitialize WLan-Hardware
@@ -125,6 +122,10 @@ class Network {
 
     String pSsid;        ///< Contains the SSID the WiFi shield is currently connected to.
     String pPassword;    ///< Contains WiFi Password
+    int pWifi_CS;
+     int      pWiFi_IRQ;
+      int                                                                                                 pWifi_RST;
+         int                                                                                              pWifi_EN;
     IPAddress pIPLocal;  ///< Contains own IP-Adress
     byte pMacRouter[6];  ///< Contains MAC Adress of the Router BSSID
     byte pMac[6];        ///< Contains own MAC Adress

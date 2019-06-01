@@ -15,12 +15,13 @@
 #define MYJSON_H__
 
 #include "Arduino.h"
-
-#include "CommunicationConfiguration.h"
+#include "myJSONStr.h"
+// #include "CommunicationConfiguration.h"
 #include "LogConfiguration.h"
 
 #include <ArduinoJson.h>  //https://arduinojson.org/
 
+// extern myJSONStr;
 /**
  * @brief myJSON class handels the conversion from the JSON-Format into a struct
  * 
@@ -31,7 +32,7 @@ class myJSON {
      * @brief Construct a new myJSON object
      *
      */
-    myJSON();
+    myJSON(const size_t ParsCapacity);
 
     /**
      * @brief Checks if to Structs of the Typ myJSONstr are equal
@@ -60,6 +61,6 @@ class myJSON {
     String lastMessage = "init";
 
    private:
-    const size_t pParsCapacity = MAX_JSON_PARSE_SIZE;
+    const size_t pParsCapacity;
 };
 #endif

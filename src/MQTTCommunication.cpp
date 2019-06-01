@@ -22,7 +22,7 @@ https://assetwolf.com/learn/sending-data-from-arduino-to-cloud
 #include "MQTTCommunication.h"
 
 //==Global Vairable====
-myJSON _myjson;                                              ///< instance of myJSON
+myJSON _myjson(MAX_JSON_PARSE_SIZE);                                              ///< instance of myJSON
 CircularBuffer<myJSONStr, MAX_JSON_MESSAGES_SAVED> _buffer;  ///< instance of CircularBuffer
 
 //======Func====
@@ -78,6 +78,6 @@ void callback(char* topic, byte* payload, unsigned int length) {
     }
 }
 
-Communication::Communication() {
+Communication::Communication(String Hostname) : pHostname(Hostname){
     init();
 }

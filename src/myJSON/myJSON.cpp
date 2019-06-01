@@ -13,34 +13,8 @@
 
 #include "myJSON.h"
 
-myJSON::myJSON() {
+myJSON::myJSON(const size_t ParsCapacity) : pParsCapacity(ParsCapacity) {
 }
-
-// bool myJSON::StructIsEqual(const myJSONStr& lhs, const myJSONStr& rhs) {
-//     DBFUNCCALLln("myJSON::StructIsEqual(...)");
-//     DBINFO3ln(String("sensor: ") + String(lhs.sensor) + String(" / ") + String(rhs.sensor));
-//     if (!(lhs.sensor == rhs.sensor)) {
-//         DBINFO3ln("sensor diffrent");
-//         return false;
-//     }
-//     DBINFO3ln(String("time: ") + String(lhs.time) + String(" / ") + String(rhs.time));
-//     if (!(lhs.time == rhs.time)) {
-//         DBINFO3ln("time diffrent");
-//         return false;
-//     }
-//     DBINFO3ln(String("data[0]: ") + String(lhs.data[0]) + String(" / ") + String(rhs.data[0]));
-//     if (!(lhs.data[0] == rhs.data[0])) {
-//         DBINFO3ln("data[0] diffrent");
-//         return false;
-//     }
-//     DBINFO3ln(String("data[1]: ") + String(lhs.data[1]) + String(" / ") + String(rhs.data[1]));
-//     if (!(lhs.data[1] == rhs.data[1])) {
-//         DBINFO3ln("data[1] diffrent");
-//         return false;
-//     }
-//     DBINFO3ln("Structs are the same");
-//     return true;
-// }
 
 myJSONStr myJSON::parsingJSONToStruct(const char* json) {
     DBFUNCCALLln("myJSON::parsingJSONToStruct(const char* json)");
@@ -69,11 +43,6 @@ myJSONStr myJSON::parsingJSONToStruct(const char* json) {
         tempStr.cargo = doc["cargo"].as<String>();    // "gemuse"
         tempStr.token = doc["token"].as<bool>();      // false
         tempStr.error = doc["error"].as<bool>();      // false
-
-        // tempStr.sensor = doc["sensor"].as<String>();   // "gps"
-        // tempStr.time = doc["time"].as<long>();         // 1351824120
-        // tempStr.data[0] = doc["data"][0].as<float>();  // 48.75608
-        // tempStr.data[1] = doc["data"][1].as<float>();  // 2.302038
         return tempStr;
     }
 }
