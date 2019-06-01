@@ -13,15 +13,20 @@
         "email": null,
         "url": "https://github.com/LMazzole"
     },
-    "exclude": [
-        "doxygen",
-        "docs",
-        "test"
-    ],
+    "export": {
+        "include": null,
+        "exclude": [
+            "doxygen",
+            "docs",
+            "test"
+        ]
+    },
     "dependencies": [
-        "PubSubClient",
-        "WiFi101",
-        "ArduinoJson"
+        {
+            "PubSubClient",
+            "WiFi101",
+            "ArduinoJson"
+        }
     ],
     "frameworks": "arduino",
     "platforms": "*"
