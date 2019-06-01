@@ -23,9 +23,13 @@
     },
     "dependencies": [
         {
-            "PubSubClient",
-            "WiFi101",
-            "ArduinoJson"
+            "name": "PubSubClient"
+        },
+        {
+            "name": "WiFi101"
+        },
+        {
+            "name": "ArduinoJson"
         }
     ],
     "frameworks": "arduino",
