@@ -14,11 +14,10 @@
         "url": "https://github.com/LMazzole"
     },
     "export": {
-        "include": null,
         "exclude": [
-            "doxygen/*",
-            "docs/*",
-            "test/*"
+            "doxygen",
+            "docs",
+            "test"
         ]
     },
     "dependencies": [
@@ -33,6 +32,9 @@
         },
         {
             "name": "CircularBuffer"
+        },
+        {
+            "name": "SPI"
         }
     ],
     "frameworks": "arduino",
