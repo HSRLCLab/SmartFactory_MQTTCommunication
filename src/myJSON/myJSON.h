@@ -16,12 +16,11 @@
 
 #include "Arduino.h"
 #include "myJSONStr.h"
-// #include "CommunicationConfiguration.h"
+
 #include "LogConfiguration.h"
 
 #include <ArduinoJson.h>  //https://arduinojson.org/
 
-// extern myJSONStr;
 /**
  * @brief myJSON class handels the conversion from the JSON-Format into a struct
  * 
