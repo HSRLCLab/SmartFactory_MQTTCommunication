@@ -13,13 +13,6 @@
         "email": null,
         "url": "https://github.com/LMazzole"
     },
-    "export": {
-        "exclude": [
-            "doxygen",
-            "docs",
-            "test"
-        ]
-    },
     "dependencies": [
         {
             "name": "PubSubClient"
@@ -32,11 +25,20 @@
         },
         {
             "name": "CircularBuffer"
-        },
-        {
-            "name": "SPI"
         }
     ],
     "frameworks": "arduino",
-    "platforms": "*"
+    "platforms": "*",
+    "export": {
+        "exclude": [
+            "doxygen",
+            "docs",
+            "test"
+        ]
+    },
+    "src_filter": [
+        "-<doxygen>",
+        "-<docs>",
+        "-<test>"
+    ]
 }
