@@ -2,7 +2,7 @@
     "name": "MQTTCommunication",
     "keywords": "MQTT, web, communication",
     "description": "MQTT communication for Sortic",
-    // "homepage": "https://arduinojson.org/?utm_source=meta&utm_medium=library.json",
+    "homepage": null,
     "repository": {
         "type": "git",
         "url": "https://github.com/LMazzole/MQTTCommunication.git"
@@ -10,6 +10,7 @@
     "version": "1.0.0",
     "authors": {
         "name": "Luca Mazzoleni",
+        "email": null,
         "url": "https://github.com/LMazzole"
     },
     "exclude": [
@@ -17,11 +18,11 @@
         "docs",
         "test"
     ],
-    "dependencies": {
-        "PubSubClient": "PubSubClient",
-        "WiFi101": "WiFi101",
-        "ArduinoJson": "ArduinoJson"
-    },
+    "dependencies": [
+        "PubSubClient",
+        "WiFi101",
+        "ArduinoJson"
+    ],
     "frameworks": "arduino",
     "platforms": "*"
 }
