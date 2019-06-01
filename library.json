@@ -36,9 +36,5 @@
             "test"
         ]
     },
-    "src_filter": [
-        "-<doxygen>",
-        "-<docs>",
-        "-<test>"
-    ]
+    "srcFilter": "-<doxygen/> -<docs/> -<test/>"
 }
