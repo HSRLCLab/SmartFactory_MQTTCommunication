@@ -24,6 +24,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "MQTT Communication", "index.html", [
+    [ "MQTTCommunication", "md__v_1__git__smart_factory__m_q_t_t_communication__r_e_a_d_m_e.html", null ],
     [ "Todo List", "todo.html", null ],
     [ "Bug List", "bug.html", null ],
     [ "Classes", "annotated.html", [
@@ -40,7 +41,8 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ]
+        [ "Variables", "globals_vars.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -48,7 +50,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_m_q_t_t_communication_8cpp.html"
+"_communication_configuration_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

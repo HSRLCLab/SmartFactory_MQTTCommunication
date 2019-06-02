@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mymqttclient',['myMQTTclient',['../classmy_m_q_t_t.html#a3a747c468141e67bcd20c955850e142d',1,'myMQTT']]]
+  ['error',['error',['../structmy_j_s_o_n_str.html#a47cc65fe9a93c0436c7c1f977be884db',1,'myJSONStr']]]
 ];

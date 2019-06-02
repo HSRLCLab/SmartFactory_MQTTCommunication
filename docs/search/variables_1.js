@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['funcpointer',['funcPointer',['../class_communication.html#a0b8c2ab44fad41881b8da21367a02da4',1,'Communication']]]
+  ['ack',['ack',['../structmy_j_s_o_n_str.html#a35f72407798562c604aa8ce4517979db',1,'myJSONStr']]]
 ];

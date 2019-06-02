@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MQTT Communication
    </div>
-   <div id="projectbrief">Sortic</div>
+   <div id="projectbrief">Smart Factory</div>
   </td>
  </tr>
  </tbody>
@@ -98,6 +98,7 @@ $(document).ready(function(){initNavTree('_m_q_t_t_communication_8h.html','');})
 <p>The Connection-class is used as interface.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;Arduino.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_communication_configuration_8h_source.html">CommunicationConfiguration.h</a>&quot;</code><br />
 <code>#include &lt;CircularBuffer.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="_network_8h_source.html">Network/Network.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="my_j_s_o_n_8h_source.html">myJSON/myJSON.h</a>&quot;</code><br />
@@ -122,8 +123,8 @@ Variables</h2></td></tr>
 <tr class="memitem:a7b53ade1cc8486457ead86c3c41a0c7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmy_j_s_o_n.html">myJSON</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m_q_t_t_communication_8h.html#a7b53ade1cc8486457ead86c3c41a0c7e">_myjson</a></td></tr>
 <tr class="memdesc:a7b53ade1cc8486457ead86c3c41a0c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a global variable from typ <a class="el" href="classmy_j_s_o_n.html" title="myJSON class handels the conversion from the JSON-Format into a struct">myJSON</a> so it can be accessed in callback.  <a href="#a7b53ade1cc8486457ead86c3c41a0c7e">More...</a><br /></td></tr>
 <tr class="separator:a7b53ade1cc8486457ead86c3c41a0c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac88e2994c014e5e95aa2497a7501ea6a"><td class="memItemLeft" align="right" valign="top">CircularBuffer&lt; myJSONStr, MAX_JSON_MESSAGES_SAVED &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m_q_t_t_communication_8h.html#ac88e2994c014e5e95aa2497a7501ea6a">_buffer</a></td></tr>
-<tr class="memdesc:ac88e2994c014e5e95aa2497a7501ea6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a global Circular Buffer of type myJSONStr with max Elements of MAX_JSON_MESSAGES_SAVED.  <a href="#ac88e2994c014e5e95aa2497a7501ea6a">More...</a><br /></td></tr>
+<tr class="memitem:ac88e2994c014e5e95aa2497a7501ea6a"><td class="memItemLeft" align="right" valign="top">CircularBuffer&lt; <a class="el" href="structmy_j_s_o_n_str.html">myJSONStr</a>, <a class="el" href="_communication_configuration_8h.html#acf4afb55aa7d1288ad9dffc623360a8c">MAX_JSON_MESSAGES_SAVED</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m_q_t_t_communication_8h.html#ac88e2994c014e5e95aa2497a7501ea6a">_buffer</a></td></tr>
+<tr class="memdesc:ac88e2994c014e5e95aa2497a7501ea6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a global Circular Buffer of type <a class="el" href="structmy_j_s_o_n_str.html">myJSONStr</a> with max Elements of MAX_JSON_MESSAGES_SAVED.  <a href="#ac88e2994c014e5e95aa2497a7501ea6a">More...</a><br /></td></tr>
 <tr class="separator:ac88e2994c014e5e95aa2497a7501ea6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -132,7 +133,7 @@ Variables</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 - added Connection-Implementation - Luca Mazzoleni (<a href="#" onclick="location.href='mai'+'lto:'+'luc'+'a.'+'maz'+'zo'+'len'+'i@'+'hsr'+'.c'+'h'; return false;">luca.<span style="display: none;">.nosp@m.</span>mazz<span style="display: none;">.nosp@m.</span>oleni<span style="display: none;">.nosp@m.</span>@hsr<span style="display: none;">.nosp@m.</span>.ch</a>) - 2019-04-16</dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2019-04-09 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2019</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Update to official library standart arduino <a href="https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5:-Library-specification">https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5:-Library-specification</a></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Update to official library standart arduino <a href="https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5:-Library-specification">https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5:-Library-specification</a></dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="_m_q_t_t_communication_8h_source.html">MQTTCommunication.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -180,7 +181,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd><p class="startdd">String is inefficient -&gt; change to char array and handle pointer </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd><p class="startdd">String is inefficient -&gt; change to char array and handle pointer </p>
 <p class="enddd">Change global implementation </p>
 </dd></dl>
 
@@ -196,14 +197,14 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CircularBuffer&lt;myJSONStr, MAX_JSON_MESSAGES_SAVED&gt; _buffer</td>
+          <td class="memname">CircularBuffer&lt;<a class="el" href="structmy_j_s_o_n_str.html">myJSONStr</a>, <a class="el" href="_communication_configuration_8h.html#acf4afb55aa7d1288ad9dffc623360a8c">MAX_JSON_MESSAGES_SAVED</a>&gt; _buffer</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Declares a global Circular Buffer of type myJSONStr with max Elements of MAX_JSON_MESSAGES_SAVED. </p>
+<p>Declares a global Circular Buffer of type <a class="el" href="structmy_j_s_o_n_str.html">myJSONStr</a> with max Elements of MAX_JSON_MESSAGES_SAVED. </p>
 <p>When declaring your buffer you should specify the data type it must handle and the buffer capacity: those two parameters will influence the memory consumed by the buffer. <a href="https://github.com/rlogiacco/CircularBuffer">https://github.com/rlogiacco/CircularBuffer</a></p>
-<p>Declares a global Circular Buffer of type myJSONStr with max Elements of MAX_JSON_MESSAGES_SAVED. </p>
+<p>Declares a global Circular Buffer of type <a class="el" href="structmy_j_s_o_n_str.html">myJSONStr</a> with max Elements of MAX_JSON_MESSAGES_SAVED. </p>
 
 <p class="definition">Definition at line <a class="el" href="_m_q_t_t_communication_8cpp_source.html#l00026">26</a> of file <a class="el" href="_m_q_t_t_communication_8cpp_source.html">MQTTCommunication.cpp</a>.</p>
 
@@ -223,8 +224,6 @@ Variables</h2></td></tr>
 
 <p>Declare a global variable from typ <a class="el" href="classmy_j_s_o_n.html" title="myJSON class handels the conversion from the JSON-Format into a struct">myJSON</a> so it can be accessed in callback. </p>
 <p>Declare a global variable from typ <a class="el" href="classmy_j_s_o_n.html" title="myJSON class handels the conversion from the JSON-Format into a struct">myJSON</a> so it can be accessed in callback. </p>
-
-<p class="definition">Definition at line <a class="el" href="_m_q_t_t_communication_8cpp_source.html#l00025">25</a> of file <a class="el" href="_m_q_t_t_communication_8cpp_source.html">MQTTCommunication.cpp</a>.</p>
 
 </div>
 </div>

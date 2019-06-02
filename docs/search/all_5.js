@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getelement',['getElement',['../class_communication.html#a39b312c42c6977923b275047a84e81fe',1,'Communication']]]
+  ['error',['error',['../structmy_j_s_o_n_str.html#a47cc65fe9a93c0436c7c1f977be884db',1,'myJSONStr']]]
 ];
