@@ -2,8 +2,6 @@ var searchData=
 [
   ['max_5fjson_5fmessages_5fsaved',['MAX_JSON_MESSAGES_SAVED',['../_communication_configuration_8h.html#acf4afb55aa7d1288ad9dffc623360a8c',1,'CommunicationConfiguration.h']]],
   ['max_5fjson_5fparse_5fsize',['MAX_JSON_PARSE_SIZE',['../_communication_configuration_8h.html#a268cecf8b27e3323864627d776dee31d',1,'CommunicationConfiguration.h']]],
-  ['max_5fmqtt_5ftopic_5fdepth',['MAX_MQTT_TOPIC_DEPTH',['../_communication_configuration_8h.html#a8ef1dda67b152600d665bc83d81a7537',1,'CommunicationConfiguration.h']]],
-  ['mqttcommunication',['MQTTCommunication',['../md__v_1__git__smart_factory__m_q_t_t_communication__r_e_a_d_m_e.html',1,'']]],
   ['mqttcommunication_2ecpp',['MQTTCommunication.cpp',['../_m_q_t_t_communication_8cpp.html',1,'']]],
   ['mqttcommunication_2eh',['MQTTCommunication.h',['../_m_q_t_t_communication_8h.html',1,'']]],
   ['mqttconnectionfailed',['MQTTConnectionFailed',['../classmy_m_q_t_t.html#a260a10a835dc83e7268bc901c5a45a00',1,'myMQTT']]],

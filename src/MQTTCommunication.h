@@ -9,7 +9,8 @@
  * @date 2019-04-09
  * @copyright Copyright (c) 2019
  * 
- * @todo Update to official library standart arduino https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5:-Library-specification
+ * @todo Split the Code into two Repos: SmartFactory_Communication-Sortic\n
+ * and SmartFactory_MQTTCommunication-Basis to simplify modular use.
  * 
  */
 

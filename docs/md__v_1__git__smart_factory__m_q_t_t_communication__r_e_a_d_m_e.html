@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MQTT Communication: MQTTCommunication</title>
+<title>MQTT Communication: SmartFactory_MQTTCommunication</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -87,10 +87,71 @@ $(document).ready(function(){initNavTree('md__v_1__git__smart_factory__m_q_t_t_c
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">MQTTCommunication </div>  </div>
+<div class="title">SmartFactory_MQTTCommunication </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- PageDoc -->
+<div class="textblock"><p>The SmartFactroy_MQTTCommunication is an modular part of the SmartFactory Project.</p>
+<p>It establishes a WLAN-Communication with an MQTT-Broker and allows you to send and receive Messages.</p>
+<h2>Hardware</h2>
+<p>This Code needs a WLAN-Shield to function properly.</p>
+<p>It's tested with an <a href="https://www.adafruit.com/product/3010">Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500</a> from Adafruit.</p>
+<h2>Tools and Technologies</h2>
+<h3>Doxygen</h3>
+<p>Doxygen is used for the documentation of the sourcecode An intorduction to <em>Doxygen</em> and how to install it can be found <a href="https://github.com/LMazzole/ArdFSM#howto-use-doxygen-in-vscode">here</a>.</p>
+<h3>VSCode PlatformIO</h3>
+<p>The used IDE is <a href="https://code.visualstudio.com/">VSCode</a> with the <a href="https://platformio.org/platformio-ide">PlatformIO</a>-Extension.</p>
+<h3>MQTT</h3>
+<p>MQTT (Message Queuing Telemetry Transport) is an lightweight publish-subscribe messaging protocol and requires a broker to relay the messages. It's used for M2M (machine-to-machine) communication. An MQTT-System always consist of a broker and one or multiple clients, which can be either subscriber or publisher. A Client can subscribe and publish to one or multiple Topics. Topics are organized in a Tree similar to a Folder-structure in Windows. For more Infos about MQTT and MQTT-Topics check out the MQTT-Wiki on <a href="https://github.com/mqtt/mqtt.github.io/wiki">Github</a>.</p>
+<p>[Source: <a href="https://en.wikipedia.org/wiki/MQTT">Wiki:MQTT</a>, <a href="https://mqtt.org/">MQTT</a> ]</p>
+<h2>Using SmartFactory_MQTTCommunication</h2>
+<p>MQTTCommunication establishes a WLAN-Connection and allows you to connect</p>
+<p>with an MQTT-Broker to send and receive Message.</p>
+<p>Incomming Messages need to be in an kown JSON-Format and will be convertet into a Struct.</p>
+<p>These Structs are stored in an Circular-Buffer (Ring-Buffer).</p>
+<h3>Important Functions and Files</h3>
+<p>All functions and files are Documented on the <a href="https://lmazzole.github.io/SmartFactory_MQTTCommunication/">GitHub-Page</a> </p><h4><a class="el" href="_m_q_t_t_communication_8h.html" title="The Connection-class is used as interface.">MQTTCommunication.h</a></h4>
+<p>The <em><a class="el" href="_m_q_t_t_communication_8h.html" title="The Connection-class is used as interface.">MQTTCommunication.h</a></em>-File serves as Interface. It provides the functions for:</p><ul>
+<li>Network-Connection</li>
+<li>MQTT-Functionalities</li>
+<li>access the Message-Storage</li>
+</ul>
+<h4><a class="el" href="_communication_configuration_8h.html" title="file that contains the default communication configuration">CommunicationConfiguration.h</a></h4>
+<p>In the <em><a class="el" href="_communication_configuration_8h.html" title="file that contains the default communication configuration">CommunicationConfiguration.h</a></em>-File are alle important things defined:</p><ul>
+<li>WLAN SSID</li>
+<li>WLAN password</li>
+<li>WLAN Shield pins</li>
+<li>MQTT Broker IP</li>
+<li>JSON parse size</li>
+<li>Cirrcular Buffer size</li>
+</ul>
+<h3>FAQ's</h3>
+<p>I'd like to use this code in my project. What do I need to know? </p><blockquote class="doxtable">
+<p>All you need to do is at the GitHub-Link to this Repo under <em>lib_deps</em> in your platformio.ini File and your good to go. </p>
+</blockquote>
+<p>Where can I change the configurations like MQTT-Broker IP and WLAN-Credentials?</p>
+<blockquote class="doxtable">
+<p>All the Configurationdata are stored in the <em><a class="el" href="_communication_configuration_8h.html" title="file that contains the default communication configuration">CommunicationConfiguration.h</a></em> file and can be edited there. </p>
+</blockquote>
+<p>I'd like to change the incomming JSON-Message. How can I do that?</p>
+<blockquote class="doxtable">
+<p>Incoming Messages need to be in an know JSON-Format which is defined in* <a class="el" href="my_j_s_o_n_str_8h.html">myJSONStr.h</a>* and needs to match the implementation in <em><a class="el" href="classmy_j_s_o_n.html#ad655cf00d966cba2100ceb5ed89f3215" title="Parsing JSON-Format into myJSONStr.">myJSON::parsingJSONToStruct</a></em>. If you would like to change this Format you need to adapt both files. </p>
+</blockquote>
+<h3>Dependencies</h3>
+<ul>
+<li><a href="https://pubsubclient.knolleary.net/">PubSubClient</a></li>
+<li><a href="https://www.arduino.cc/en/Reference/WiFi101">WiFi101</a></li>
+<li><a href="https://arduinojson.org/">ArduinoJson</a></li>
+<li><a href="https://github.com/rlogiacco/CircularBuffer">CircularBuffer</a></li>
+</ul>
+<h3>ToDo's</h3>
+<p>The open ToDo's can be fund in the Documenation on the <a href="https://lmazzole.github.io/SmartFactory_MQTTCommunication/todo.html">GitHub-Page</a></p>
+<h3>Contributors</h3>
+<p><a href="https://github.com/LMazzole">Luca Mazzoleni</a></p>
+<h3>Changelog</h3>
+<p>V 1.0 - Release BA FS19 - <a href="https://github.com/LMazzole">Luca Mazzoleni</a></p>
+<h2>License</h2>
+<p>[TODO] </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

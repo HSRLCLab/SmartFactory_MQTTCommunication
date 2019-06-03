@@ -1,12 +1,11 @@
 /**
  * @file CommunicationConfiguration.h
- * @brief file that contains the default network configuration
+ * @brief file that contains the default communication configuration
  * 
  * 
- * @author Luciano Bettinaglio (luciano.bettinaglio@hsr.ch)
+ * @author Luca Mazzoleni (luca.mazzoleni@hsr.ch)
  * 
- * @version 1.1 - Added Doxygen-Documentation  - Luca Mazzoleni (luca.mazzoleni@hsr.ch)  - 2019-03-20
- * @version 1.0 - SA SmartFactroyBox HS 2018
+ * @version 1.0 - BA FS19 - Luca Mazzoleni (luca.mazzoleni@hsr.ch) - 03.06.2019
  * 
  * @date 2019-03-07
  * 
@@ -38,10 +37,9 @@
 #define DEFAULT_MQTT_BROKER_IP4 22   ///<
 #define DEFAULT_MQTT_PORT 1883       ///< MQTT connection port
 
-
 //=============JSON==================================
 #define MAX_JSON_PARSE_SIZE 300     ///< max buffer size to parse JSON objects, size of the pool in bytes, can be calculated in https://arduinojson.org/v5/assistant/
 #define MAX_JSON_MESSAGES_SAVED 20  ///< max num of saved JSON items, must be smaller than num of vehicles!
-#define MAX_MQTT_TOPIC_DEPTH 5      ///< how many topics can be in row, e.g. SmartBox/SB1/level are 3 topic levels
+// #define MAX_MQTT_TOPIC_DEPTH 5      ///< how many topics can be in row, e.g. SmartBox/SB1/level are 3 topic levels
 
 #endif

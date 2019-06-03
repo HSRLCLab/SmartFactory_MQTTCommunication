@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['smartfactory_5fmqttcommunication',['SmartFactory_MQTTCommunication',['../md__v_1__git__smart_factory__m_q_t_t_communication__r_e_a_d_m_e.html',1,'']]],
   ['sector',['sector',['../structmy_j_s_o_n_str.html#a9af6b277c881ad4811835102ce45d82b',1,'myJSONStr']]],
   ['shift',['shift',['../class_communication.html#a0925e5cd26fc4fc3a0f99c1997bf0644',1,'Communication']]],
   ['size',['size',['../class_communication.html#a097f09aba41fec80fd226c75b91c1cd5',1,'Communication']]],

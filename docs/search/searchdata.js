@@ -6,7 +6,7 @@ var indexSectionsWithContent =
   3: "cdfgilmnpsu",
   4: "_acefilmprst",
   5: "dm",
-  6: "bmt"
+  6: "bst"
 };
 
 var indexSectionNames =
