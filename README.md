@@ -47,12 +47,13 @@ The used  IDE is [VSCode](https://code.visualstudio.com/) with the [PlatformIO](
 MQTT (Message Queuing Telemetry Transport) is an lightweight  publish-subscribe messaging   protocol and requires a broker to relay the messages. It's used for M2M (machine-to-machine) communication.  
 An MQTT-System always consist of a broker and one or multiple clients, which can be either subscriber or publisher. 
 
-<img src="./docs/Images/MQTTPublishSubscribe.png" height="300"/>   
+<img src="./docs/images/MQTTPublishSubscribe.png" height="300"/>   
+
 [Image: [MQTT101 - Eclispe Foundation](<https://www.eclipse.org/community/eclipse_newsletter/2014/october/article2.php>)]
 
 A Client can subscribe and publish to one or multiple Topics. Topics are organized in a Tree similar to a Folder-structure in Windows. Here's an Example how such an Topic-Tree and published messages can look like:
 
-<img src="./docs/Images/MQTTTopics.png" height="600"/> 
+<img src="./docs/images/MQTTTopics.png" height="600"/> 
 
 This Images also illustrates well the scalability of MQTT.  
 For more Infos about MQTT and MQTT-Topics check out the MQTT-Wiki on [Github](https://github.com/mqtt/mqtt.github.io/wiki).   
@@ -63,7 +64,8 @@ For more Infos about MQTT and MQTT-Topics check out the MQTT-Wiki on [Github](ht
 ### Circular Buffer
 A Circular Buffer or a Ring-Buffer uses an buffer with fixed Size. If the Buffer is full the oldest Element gets overwritten.
 
-<img src="./docs/Images/Circular_Buffer_Animation.gif" height="300"/> 
+<img src="./docs/images/Circular_Buffer_Animation.gif" height="300"/> 
+
 [Image: [Wiki: Circular buffer](https://en.wikipedia.org/wiki/Circular_buffer)]
 
 ## Using SmartFactory_MQTTCommunication
