@@ -3,6 +3,29 @@
 The SmartFactroy_MQTTCommunication is an modular part of the SmartFactory Project.  
 It establishes a WLAN-Communication with an MQTT-Broker and allows you to send and receive Messages.
 
+<!-- add Pagebreak in Print: <div style="page-break-after: always;"></div> -->
+
+## Table of Content
+<!-- TOC Generated with https://magnetikonline.github.io/markdown-toc-generate/ -->
+
+- [Hardware](#hardware)
+- [Tools and Technologies](#tools-and-technologies)
+   - [Doxygen](#doxygen)
+   - [VSCode PlatformIO](#vscode-platformio)
+   - [MQTT](#mqtt)
+- [Using SmartFactory_MQTTCommunication](#using-smartfactory_mqttcommunication)
+   - [Important Functions and Files](#important-functions-and-files)
+      - [MQTTCommunication.h](#mqttcommunicationh)
+      - [CommunicationConfiguration.h](#communicationconfigurationh)
+   - [myJSONStr.h](#myjsonstrh)
+   - [FAQ's](#faqs)
+   - [Dependencies](#dependencies)
+   - [ToDo's](#todos)
+   - [Contributors](#contributors)
+   - [Changelog](#changelog)
+- [License](#license)
+
+
 ## Hardware
 This Code needs a WLAN-Shield to function properly.  
 It's tested with an [Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500](https://www.adafruit.com/product/3010) from Adafruit.
