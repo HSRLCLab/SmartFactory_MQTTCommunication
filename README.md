@@ -13,6 +13,7 @@ It establishes a WLAN-Communication with an MQTT-Broker and allows you to send a
    - [Doxygen](#doxygen)
    - [VSCode PlatformIO](#vscode-platformio)
    - [MQTT](#mqtt)
+   - [Circular Buffer](#circular-buffer)
 - [Using SmartFactory_MQTTCommunication](#using-smartfactory_mqttcommunication)
    - [Important Functions and Files](#important-functions-and-files)
       - [MQTTCommunication.h](#mqttcommunicationh)
@@ -36,24 +37,40 @@ The Source-code is written in C++.
 To achieve this project, the following listed tools and technologies were used.
 
 ### Doxygen
-Doxygen is used for the documentation of the sourcecode 
+Doxygen is used for the documentation of the sourcecode.  
 An intorduction to *Doxygen* and how to install it can be found [here](https://github.com/LMazzole/ArdFSM#howto-use-doxygen-in-vscode).  
+
 ### VSCode PlatformIO
 The used  IDE is [VSCode](https://code.visualstudio.com/) with the [PlatformIO](https://platformio.org/platformio-ide)-Extension.
 
 ### MQTT
-MQTT (Message Queuing Telemetry Transport) is an lightweight  publish-subscribe messaging   protocol and requires a broker to relay the messages. It's used for M2M (machine-to-machine) communication. 
-An MQTT-System always consist of a broker and one or multiple clients, which can be either subscriber or publisher. A Client can subscribe and publish to one or multiple Topics. Topics are organized in a Tree similar to a Folder-structure in Windows. For more Infos about MQTT and MQTT-Topics check out the MQTT-Wiki on [Github](https://github.com/mqtt/mqtt.github.io/wiki).
+MQTT (Message Queuing Telemetry Transport) is an lightweight  publish-subscribe messaging   protocol and requires a broker to relay the messages. It's used for M2M (machine-to-machine) communication.  
+An MQTT-System always consist of a broker and one or multiple clients, which can be either subscriber or publisher. 
 
-[Source: [Wiki:MQTT](https://en.wikipedia.org/wiki/MQTT), [MQTT](https://mqtt.org/) ]
+<img src="./docs/Images/MQTTPublishSubscribe.png" height="300"/>   
+[Image: [MQTT101 - Eclispe Foundation](<https://www.eclipse.org/community/eclipse_newsletter/2014/october/article2.php>)]
+
+A Client can subscribe and publish to one or multiple Topics. Topics are organized in a Tree similar to a Folder-structure in Windows. Here's an Example how such an Topic-Tree and published messages can look like:
+
+<img src="./docs/Images/MQTTTopics.png" height="600"/> 
+
+This Images also illustrates well the scalability of MQTT.  
+For more Infos about MQTT and MQTT-Topics check out the MQTT-Wiki on [Github](https://github.com/mqtt/mqtt.github.io/wiki).   
+[Source: [Wiki:MQTT](https://en.wikipedia.org/wiki/MQTT), [MQTT](https://mqtt.org/) ]  
 
 <div style="page-break-after: always;"></div>
+
+### Circular Buffer
+A Circular Buffer or a Ring-Buffer uses an buffer with fixed Size. If the Buffer is full the oldest Element gets overwritten.
+
+<img src="./docs/Images/Circular_Buffer_Animation.gif" height="300"/> 
+[Image: [Wiki: Circular buffer](https://en.wikipedia.org/wiki/Circular_buffer)]
 
 ## Using SmartFactory_MQTTCommunication
 MQTTCommunication establishes a WLAN-Connection and allows you to connect  
 with an MQTT-Broker to send and receive Message.  
 Incomming Messages need to be in an kown JSON-Format and  will be convertet into a Struct.  
-These Structs are stored in an Circular-Buffer (Ring-Buffer).
+These Structs are stored in an Circular-Buffer.
 
 ### Important Functions and Files
 All functions and files are Documented on the [GitHub-Page](https://lmazzole.github.io/SmartFactory_MQTTCommunication/)
@@ -73,7 +90,7 @@ In the *CommunicationConfiguration.h*-File are all important settings defined:
 * JSON parse size
 * Cirrcular Buffer size
 
-### myJSONStr.h
+#### myJSONStr.h
 In the *myJSONStr.h*-File is defined how the JSON-Message and hence the struct looks like.
 
 This is how the JSON-Message (received as String) can look like:

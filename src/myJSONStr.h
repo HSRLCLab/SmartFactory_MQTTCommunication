@@ -1,3 +1,9 @@
+/**
+ * @file myJSONStr.h
+ * @brief 
+ * 
+ */
+
 #ifndef MYJSONSTR_H
 #define MYJSONSTR_H
 
