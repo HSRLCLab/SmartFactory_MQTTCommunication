@@ -9,6 +9,8 @@
  * @date 2019-04-16
  * @copyright Copyright (c) 2019
  * 
+ * @todo Add a function "unsubscirbeAll" which unsubscribes from all subscirbed topics.
+ * Hence you need to track all your subscribed topcis in an array.
  */
 
 #ifndef MYMQTT_H__

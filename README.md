@@ -8,6 +8,9 @@ This Code needs a WLAN-Shield to function properly.
 It's tested with an [Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500](https://www.adafruit.com/product/3010) from Adafruit.
 
 ## Tools and Technologies
+
+The Source-code is written in C++ with the help of the following tools;
+
 ### Doxygen
 Doxygen is used for the documentation of the sourcecode 
 An intorduction to *Doxygen* and how to install it can be found [here](https://github.com/LMazzole/ArdFSM#howto-use-doxygen-in-vscode).  
@@ -43,6 +46,40 @@ In the *CommunicationConfiguration.h*-File are alle important things defined:
 * MQTT Broker IP
 * JSON parse size
 * Cirrcular Buffer size
+
+### myJSONStr.h
+In the *myJSONStr.h*-File is defined how the JSON-Message and hence the struct looks like.
+
+This is how the JSON-Message (received as String) can look like:
+``` javascript
+{
+  "id": "hostname",
+  "topic": "topic/topic",
+  "status": "driving",
+  "sector": "transit",
+  "line": 1,
+  "ack":"hostname",
+  "req":"hostname",
+  "cargo":"beer",
+  "token":false;
+  "error":false
+}
+```
+And the corresponding Struct in which the message gets parsed:
+``` cpp
+struct myJSONStr {
+    String id = "hostname";
+    String topic = "topic/topic";
+    String status = "driving";
+    String sector = "transit";
+    int line = 1;
+    String ack = "hostname";
+    String req = "hostname";
+    String cargo = "beer";
+    bool token = false;
+    bool error = false;
+};
+```
 
 ### FAQ's
 I'd like to use this code in my project. What do I need to know?

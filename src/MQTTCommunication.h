@@ -113,7 +113,7 @@ class Communication {
      * 
      *  Checks if the Board is connected to a newtork and reconects if not
      *  Check if the client is connected to the server
-     *  if not call \link connectToMQTT() \endlink
+     *  if not call connectToMQTT()
      * 
      * @param topic - the topic to subscribe to (const char[])
      * @return true -  sending the subscribe succeeded. The request completes asynchronously.
@@ -255,10 +255,8 @@ class Communication {
                             DEFAULT_MQTT_BROKER_IP2,
                             DEFAULT_MQTT_BROKER_IP3,
                             DEFAULT_MQTT_BROKER_IP4,
-                            DEFAULT_MQTT_PORT);
-    // WiFiClient pClient;                                                   ///< instance of WiFiClient
-    // Network pNetwork;                                                     ///< instance of Network
-    // myMQTT pMymqtt;                                                       ///< instance of myMQTT
+                            DEFAULT_MQTT_PORT);  ///< instance of myMQTT
+
     void (*funcPointer)(char*, unsigned char*, unsigned int) = callback;  ///< functionpointer to callback-function
 };
 #endif
