@@ -23,6 +23,7 @@ An MQTT-System always consist of a broker and one or multiple clients, which can
 
 [Source: [Wiki:MQTT](https://en.wikipedia.org/wiki/MQTT), [MQTT](https://mqtt.org/) ]
 
+<div style="page-break-after: always;"></div>
 ## Using SmartFactory_MQTTCommunication
 MQTTCommunication establishes a WLAN-Connection and allows you to connect  
 with an MQTT-Broker to send and receive Message.  
@@ -80,7 +81,7 @@ struct myJSONStr {
     bool error = false;
 };
 ```
-
+<div style="page-break-after: always;"></div>
 ### FAQ's
 I'd like to use this code in my project. What do I need to know?
 > All you need to do is at the GitHub-Link to this Repo under *lib_deps* in your platformio.ini File and your good to go.
