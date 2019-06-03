@@ -9,7 +9,8 @@ It's tested with an [Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500](https://w
 
 ## Tools and Technologies
 
-The Source-code is written in C++ with the help of the following tools;
+The Source-code is written in C++.
+To achieve this project, the following listed tools and technologies were used.
 
 ### Doxygen
 Doxygen is used for the documentation of the sourcecode 
@@ -38,10 +39,10 @@ The *MQTTCommunication.h*-File serves as Interface.
 It provides the functions for:
 * Network-Connection
 * MQTT-Functionalities
-* access the Message-Storage
+* access the Message-Storage (Cirrcular Buffer)
 
 #### CommunicationConfiguration.h
-In the *CommunicationConfiguration.h*-File are alle important things defined:
+In the *CommunicationConfiguration.h*-File are all important settings defined:
 * WLAN SSID
 * WLAN password
 * WLAN Shield pins
@@ -85,13 +86,13 @@ struct myJSONStr {
 <div style="page-break-after: always;"></div>
 
 ### FAQ's
-I'd like to use this code in my project. What do I need to know?
-> All you need to do is at the GitHub-Link to this Repo under *lib_deps* in your platformio.ini File and your good to go.
+I'd like to use this code in my project. What do I need to know?  
+> All you need to do is at the GitHub-Link to this Repo under *lib_deps* in your platformio.ini File and your good to go. All dependencies are downloaded automatic.
 
 Where can I change the configurations like MQTT-Broker IP and WLAN-Credentials?  
 > All the Configurationdata are stored in the *CommunicationConfiguration.h* file and can be edited there.
 
-I'd like to change the incomming  JSON-Message. How can I do that?  
+I'd like to change the incoming  JSON-Message. How can I do that?  
 > Incoming Messages need to be in an know JSON-Format which is defined in* myJSONStr.h* and needs to match the implementation in *myJSON::parsingJSONToStruct*. If you would like to change this Format you need to adapt both files.
 
 ### Dependencies
