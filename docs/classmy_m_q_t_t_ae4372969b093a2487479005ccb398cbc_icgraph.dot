@@ -1,0 +1,31 @@
+digraph "myMQTT::decodeMQTTstate"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node16 [label="myMQTT::decodeMQTTstate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Decodes the Error Values from MQTT state() and returns a description."];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="myMQTT::connectToMQTT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmy_m_q_t_t.html#a6d495c08a06513954b95d961f0595959",tooltip="Connects to the MQTT-server."];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="myMQTT::init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmy_m_q_t_t.html#a5f19e4308e3dc2d748291d3ca1cd9228",tooltip=" "];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="Communication::init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_communication.html#aa526fb8aa735ea4457dc56d1f0a4fe00",tooltip="Initializes the Hard- and Software for WLAN and MQTT-Connection."];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="Communication::Communication",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_communication.html#ab88eb4c3af7925175dc96a1781da7437",tooltip="Construct a new Communication object."];
+  Node17 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="myMQTT::subscribe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmy_m_q_t_t.html#a55566e23e8705bf3390b6f8209cbd9a1",tooltip="subsribes to MQTT topic on Server"];
+  Node21 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="Communication::subscribe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_communication.html#ae7600b9fe0f1249effde2852e8101593",tooltip="subsribes to MQTT topic on Server"];
+  Node17 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="myMQTT::unsubscribe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmy_m_q_t_t.html#a215cee06699f991dd068e92e302563a5",tooltip="unsubsribes from MQTT topic on Server"];
+  Node23 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="Communication::unsubscribe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_communication.html#a6be65dea68cf039e41df2986386dac61",tooltip="unsubsribes from MQTT topic on Server"];
+  Node17 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="myMQTT::publishMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmy_m_q_t_t.html#ae15c915d8f868cc4cf5505c20f3d9816",tooltip="handles outgoing MQTT messages to Server"];
+  Node25 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="Communication::publishMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_communication.html#aa59e118e1ed15e911ae2534274ab2e58",tooltip="handles outgoing MQTT messages to Server"];
+  Node16 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="myMQTT::MQTTConnectionFailed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmy_m_q_t_t.html#a260a10a835dc83e7268bc901c5a45a00",tooltip="Writes Error-Message about MQTT connection."];
+  Node27 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

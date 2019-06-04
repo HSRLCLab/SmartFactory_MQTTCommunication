@@ -1,0 +1,15 @@
+digraph "myMQTT::unsubscribe"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node63 [label="myMQTT::unsubscribe",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="unsubsribes from MQTT topic on Server"];
+  Node63 -> Node64 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node64 [label="myMQTT::connectToMQTT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmy_m_q_t_t.html#a6d495c08a06513954b95d961f0595959",tooltip="Connects to the MQTT-server."];
+  Node64 -> Node65 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node65 [label="myMQTT::decodeMQTTstate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmy_m_q_t_t.html#ae4372969b093a2487479005ccb398cbc",tooltip="Decodes the Error Values from MQTT state() and returns a description."];
+  Node64 -> Node66 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node66 [label="myMQTT::MQTTConnectionFailed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmy_m_q_t_t.html#a260a10a835dc83e7268bc901c5a45a00",tooltip="Writes Error-Message about MQTT connection."];
+  Node66 -> Node65 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,23 @@
+digraph "Network::decodeWiFistate"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node17 [label="Network::decodeWiFistate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Decodes the Error Values from Wifi status() and returns a description."];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="Network::init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network.html#a92193e6fe7a1dc2c7a42d9c9cfed81ed",tooltip="Intitialize WLan-Hardware."];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="Communication::init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_communication.html#aa526fb8aa735ea4457dc56d1f0a4fe00",tooltip="Initializes the Hard- and Software for WLAN and MQTT-Connection."];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="Communication::Communication",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_communication.html#ab88eb4c3af7925175dc96a1781da7437",tooltip="Construct a new Communication object."];
+  Node17 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="Network::connectToWiFi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network.html#ad7fff536b31740411da0e7c8f281eda9",tooltip="Connects to a WiFi with the given Credential."];
+  Node21 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="Communication::subscribe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_communication.html#ae7600b9fe0f1249effde2852e8101593",tooltip="subsribes to MQTT topic on Server"];
+  Node21 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="Communication::unsubscribe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_communication.html#a6be65dea68cf039e41df2986386dac61",tooltip="unsubsribes from MQTT topic on Server"];
+  Node21 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="Communication::publishMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_communication.html#aa59e118e1ed15e911ae2534274ab2e58",tooltip="handles outgoing MQTT messages to Server"];
+  Node21 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

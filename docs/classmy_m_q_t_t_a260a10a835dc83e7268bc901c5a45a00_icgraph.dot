@@ -1,0 +1,28 @@
+digraph "myMQTT::MQTTConnectionFailed"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node40 [label="myMQTT::MQTTConnectionFailed",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Writes Error-Message about MQTT connection."];
+  Node40 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="myMQTT::connectToMQTT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmy_m_q_t_t.html#a6d495c08a06513954b95d961f0595959",tooltip="Connects to the MQTT-server."];
+  Node41 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="myMQTT::init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmy_m_q_t_t.html#a5f19e4308e3dc2d748291d3ca1cd9228",tooltip=" "];
+  Node42 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="Communication::init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_communication.html#aa526fb8aa735ea4457dc56d1f0a4fe00",tooltip="Initializes the Hard- and Software for WLAN and MQTT-Connection."];
+  Node43 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="Communication::Communication",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_communication.html#ab88eb4c3af7925175dc96a1781da7437",tooltip="Construct a new Communication object."];
+  Node41 -> Node45 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="myMQTT::subscribe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmy_m_q_t_t.html#a55566e23e8705bf3390b6f8209cbd9a1",tooltip="subsribes to MQTT topic on Server"];
+  Node45 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="Communication::subscribe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_communication.html#ae7600b9fe0f1249effde2852e8101593",tooltip="subsribes to MQTT topic on Server"];
+  Node41 -> Node47 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node47 [label="myMQTT::unsubscribe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmy_m_q_t_t.html#a215cee06699f991dd068e92e302563a5",tooltip="unsubsribes from MQTT topic on Server"];
+  Node47 -> Node48 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node48 [label="Communication::unsubscribe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_communication.html#a6be65dea68cf039e41df2986386dac61",tooltip="unsubsribes from MQTT topic on Server"];
+  Node41 -> Node49 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node49 [label="myMQTT::publishMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmy_m_q_t_t.html#ae15c915d8f868cc4cf5505c20f3d9816",tooltip="handles outgoing MQTT messages to Server"];
+  Node49 -> Node50 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node50 [label="Communication::publishMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_communication.html#aa59e118e1ed15e911ae2534274ab2e58",tooltip="handles outgoing MQTT messages to Server"];
+}

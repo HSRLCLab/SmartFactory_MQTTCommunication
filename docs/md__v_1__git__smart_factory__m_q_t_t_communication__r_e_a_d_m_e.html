@@ -92,31 +92,70 @@ $(document).ready(function(){initNavTree('md__v_1__git__smart_factory__m_q_t_t_c
 <div class="contents">
 <div class="textblock"><p>The SmartFactroy_MQTTCommunication is an modular part of the SmartFactory Project.</p>
 <p>It establishes a WLAN-Communication with an MQTT-Broker and allows you to send and receive Messages.</p>
+<h2>Table of Content</h2>
+<ul>
+<li><a href="#hardware">Hardware</a></li>
+<li><a href="#tools-and-technologies">Tools and Technologies</a><ul>
+<li><a href="#doxygen">Doxygen</a></li>
+<li><a href="#vscode-platformio">VSCode PlatformIO</a></li>
+<li><a href="#mqtt">MQTT</a></li>
+<li><a href="#circular-buffer">Circular Buffer</a></li>
+</ul>
+</li>
+<li><a href="#using-smartfactory_mqttcommunication">Using SmartFactory_MQTTCommunication</a><ul>
+<li><a href="#important-functions-and-files">Important Functions and Files</a><ul>
+<li><a href="#mqttcommunicationh">MQTTCommunication.h</a></li>
+<li><a href="#communicationconfigurationh">CommunicationConfiguration.h</a></li>
+</ul>
+</li>
+<li><a href="#myjsonstrh">myJSONStr.h</a></li>
+<li><a href="#faqs">FAQ's</a></li>
+<li><a href="#dependencies">Dependencies</a></li>
+<li><a href="#todos">ToDo's</a></li>
+<li><a href="#contributors">Contributors</a></li>
+<li><a href="#changelog">Changelog</a></li>
+</ul>
+</li>
+<li><a href="#license">License</a></li>
+</ul>
 <h2>Hardware</h2>
 <p>This Code needs a WLAN-Shield to function properly.</p>
 <p>It's tested with an <a href="https://www.adafruit.com/product/3010">Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500</a> from Adafruit.</p>
 <h2>Tools and Technologies</h2>
+<p>The Source-code is written in C++. To achieve this project, the following listed tools and technologies were used.</p>
 <h3>Doxygen</h3>
-<p>Doxygen is used for the documentation of the sourcecode An intorduction to <em>Doxygen</em> and how to install it can be found <a href="https://github.com/LMazzole/ArdFSM#howto-use-doxygen-in-vscode">here</a>.</p>
+<p>Doxygen is used for the documentation of the sourcecode.</p>
+<p>An intorduction to <em>Doxygen</em> and how to install it can be found <a href="https://github.com/LMazzole/ArdFSM#howto-use-doxygen-in-vscode">here</a>.</p>
 <h3>VSCode PlatformIO</h3>
 <p>The used IDE is <a href="https://code.visualstudio.com/">VSCode</a> with the <a href="https://platformio.org/platformio-ide">PlatformIO</a>-Extension.</p>
 <h3>MQTT</h3>
-<p>MQTT (Message Queuing Telemetry Transport) is an lightweight publish-subscribe messaging protocol and requires a broker to relay the messages. It's used for M2M (machine-to-machine) communication. An MQTT-System always consist of a broker and one or multiple clients, which can be either subscriber or publisher. A Client can subscribe and publish to one or multiple Topics. Topics are organized in a Tree similar to a Folder-structure in Windows. For more Infos about MQTT and MQTT-Topics check out the MQTT-Wiki on <a href="https://github.com/mqtt/mqtt.github.io/wiki">Github</a>.</p>
+<p>MQTT (Message Queuing Telemetry Transport) is an lightweight publish-subscribe messaging protocol and requires a broker to relay the messages. It's used for M2M (machine-to-machine) communication.</p>
+<p>An MQTT-System always consist of a broker and one or multiple clients, which can be either subscriber or publisher.</p>
+<img src="./docs/images/MQTTPublishSubscribe.png" height="300" alt="" class="inline"/>
+<p>[Image: <a href="https://www.eclipse.org/community/eclipse_newsletter/2014/october/article2.php">MQTT101 - Eclispe Foundation</a>]</p>
+<p>A Client can subscribe and publish to one or multiple Topics. Topics are organized in a Tree similar to a Folder-structure in Windows. Here's an Example how such an Topic-Tree and published messages can look like:</p>
+<img src="./docs/images/MQTTTopics.png" height="600" alt="" class="inline"/>
+<p>This Images also illustrates well the scalability of MQTT.</p>
+<p>For more Infos about MQTT and MQTT-Topics check out the MQTT-Wiki on <a href="https://github.com/mqtt/mqtt.github.io/wiki">Github</a>.</p>
 <p>[Source: <a href="https://en.wikipedia.org/wiki/MQTT">Wiki:MQTT</a>, <a href="https://mqtt.org/">MQTT</a> ]</p>
+<h3>Circular Buffer</h3>
+<p>A Circular Buffer or a Ring-Buffer uses an buffer with fixed Size. If the Buffer is full the oldest Element gets overwritten.</p>
+<img src="./docs/images/Circular_Buffer_Animation.gif" height="300" alt="" class="inline"/>
+<p>[Image: <a href="https://en.wikipedia.org/wiki/Circular_buffer">Wiki: Circular buffer</a>]</p>
 <h2>Using SmartFactory_MQTTCommunication</h2>
 <p>MQTTCommunication establishes a WLAN-Connection and allows you to connect</p>
 <p>with an MQTT-Broker to send and receive Message.</p>
 <p>Incomming Messages need to be in an kown JSON-Format and will be convertet into a Struct.</p>
-<p>These Structs are stored in an Circular-Buffer (Ring-Buffer).</p>
+<p>These Structs are stored in an Circular-Buffer.</p>
 <h3>Important Functions and Files</h3>
 <p>All functions and files are Documented on the <a href="https://lmazzole.github.io/SmartFactory_MQTTCommunication/">GitHub-Page</a> </p><h4><a class="el" href="_m_q_t_t_communication_8h.html" title="The Connection-class is used as interface.">MQTTCommunication.h</a></h4>
 <p>The <em><a class="el" href="_m_q_t_t_communication_8h.html" title="The Connection-class is used as interface.">MQTTCommunication.h</a></em>-File serves as Interface. It provides the functions for:</p><ul>
 <li>Network-Connection</li>
 <li>MQTT-Functionalities</li>
-<li>access the Message-Storage</li>
+<li>access the Message-Storage (Cirrcular Buffer)</li>
 </ul>
 <h4><a class="el" href="_communication_configuration_8h.html" title="file that contains the default communication configuration">CommunicationConfiguration.h</a></h4>
-<p>In the <em><a class="el" href="_communication_configuration_8h.html" title="file that contains the default communication configuration">CommunicationConfiguration.h</a></em>-File are alle important things defined:</p><ul>
+<p>In the <em><a class="el" href="_communication_configuration_8h.html" title="file that contains the default communication configuration">CommunicationConfiguration.h</a></em>-File are all important settings defined:</p><ul>
 <li>WLAN SSID</li>
 <li>WLAN password</li>
 <li>WLAN Shield pins</li>
@@ -124,15 +163,18 @@ $(document).ready(function(){initNavTree('md__v_1__git__smart_factory__m_q_t_t_c
 <li>JSON parse size</li>
 <li>Cirrcular Buffer size</li>
 </ul>
-<h3>FAQ's</h3>
-<p>I'd like to use this code in my project. What do I need to know? </p><blockquote class="doxtable">
-<p>All you need to do is at the GitHub-Link to this Repo under <em>lib_deps</em> in your platformio.ini File and your good to go. </p>
+<h4><a class="el" href="my_j_s_o_n_str_8h.html">myJSONStr.h</a></h4>
+<p>In the <em><a class="el" href="my_j_s_o_n_str_8h.html">myJSONStr.h</a></em>-File is defined how the JSON-Message and hence the struct looks like.</p>
+<p>This is how the JSON-Message (received as String) can look like: </p><div class="fragment"><div class="line">{</div><div class="line">  &quot;id&quot;: &quot;hostname&quot;,</div><div class="line">  &quot;topic&quot;: &quot;topic/topic&quot;,</div><div class="line">  &quot;status&quot;: &quot;driving&quot;,</div><div class="line">  &quot;sector&quot;: &quot;transit&quot;,</div><div class="line">  &quot;line&quot;: 1,</div><div class="line">  &quot;ack&quot;:&quot;hostname&quot;,</div><div class="line">  &quot;req&quot;:&quot;hostname&quot;,</div><div class="line">  &quot;cargo&quot;:&quot;beer&quot;,</div><div class="line">  &quot;token&quot;:false;</div><div class="line">  &quot;error&quot;:false</div><div class="line">}</div></div><!-- fragment --><p> And the corresponding Struct in which the message gets parsed: </p><div class="fragment"><div class="line">struct myJSONStr {</div><div class="line">    String id = &quot;hostname&quot;;</div><div class="line">    String topic = &quot;topic/topic&quot;;</div><div class="line">    String status = &quot;driving&quot;;</div><div class="line">    String sector = &quot;transit&quot;;</div><div class="line">    int line = 1;</div><div class="line">    String ack = &quot;hostname&quot;;</div><div class="line">    String req = &quot;hostname&quot;;</div><div class="line">    String cargo = &quot;beer&quot;;</div><div class="line">    bool token = false;</div><div class="line">    bool error = false;</div><div class="line">};</div></div><!-- fragment --> <h3>FAQ's</h3>
+<p>I'd like to use this code in my project. What do I need to know?</p>
+<blockquote class="doxtable">
+<p>All you need to do is at the GitHub-Link to this Repo under <em>lib_deps</em> in your platformio.ini File and your good to go. All dependencies are downloaded automatic. </p>
 </blockquote>
 <p>Where can I change the configurations like MQTT-Broker IP and WLAN-Credentials?</p>
 <blockquote class="doxtable">
 <p>All the Configurationdata are stored in the <em><a class="el" href="_communication_configuration_8h.html" title="file that contains the default communication configuration">CommunicationConfiguration.h</a></em> file and can be edited there. </p>
 </blockquote>
-<p>I'd like to change the incomming JSON-Message. How can I do that?</p>
+<p>I'd like to change the incoming JSON-Message. How can I do that?</p>
 <blockquote class="doxtable">
 <p>Incoming Messages need to be in an know JSON-Format which is defined in* <a class="el" href="my_j_s_o_n_str_8h.html">myJSONStr.h</a>* and needs to match the implementation in <em><a class="el" href="classmy_j_s_o_n.html#ad655cf00d966cba2100ceb5ed89f3215" title="Parsing JSON-Format into myJSONStr.">myJSON::parsingJSONToStruct</a></em>. If you would like to change this Format you need to adapt both files. </p>
 </blockquote>

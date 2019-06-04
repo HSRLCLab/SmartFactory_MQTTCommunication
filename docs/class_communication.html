@@ -99,6 +99,16 @@ $(document).ready(function(){initNavTree('class_communication.html','');});
  <a href="class_communication.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_m_q_t_t_communication_8h_source.html">MQTTCommunication.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Communication:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_communication__coll__graph.png" border="0" usemap="#_communication_coll__map" alt="Collaboration graph"/></div>
+<map name="_communication_coll__map" id="_communication_coll__map">
+<area shape="rect"  title="The Connection&#45;class provides the interface." alt="" coords="32,95,144,121"/>
+<area shape="rect"  href="class_network.html" title="Handels the WLAN&#45;Connection." alt="" coords="5,5,75,32"/>
+<area shape="rect"  href="classmy_m_q_t_t.html" title="Handels the MQTT connection." alt="" coords="99,5,173,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -158,6 +168,7 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:aa6bf0a64203030930e74ee61153edd3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance of <a class="el" href="class_network.html" title="Handels the WLAN-Connection.">Network</a>  <a href="#aa6bf0a64203030930e74ee61153edd3a">More...</a><br /></td></tr>
 <tr class="separator:aa6bf0a64203030930e74ee61153edd3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae827543871f89ae91a3451dd7299695e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmy_m_q_t_t.html">myMQTT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication.html#ae827543871f89ae91a3451dd7299695e">pMymqtt</a></td></tr>
+<tr class="memdesc:ae827543871f89ae91a3451dd7299695e"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance of <a class="el" href="classmy_m_q_t_t.html" title="Handels the MQTT connection.">myMQTT</a>  <a href="#ae827543871f89ae91a3451dd7299695e">More...</a><br /></td></tr>
 <tr class="separator:ae827543871f89ae91a3451dd7299695e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b8c2ab44fad41881b8da21367a02da4"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication.html#a0b8c2ab44fad41881b8da21367a02da4">funcPointer</a> )(char *, unsigned char *, unsigned int) = <a class="el" href="_m_q_t_t_communication_8h.html#ac3a129f66dc859e2b7279565f4e1de78">callback</a></td></tr>
 <tr class="memdesc:a0b8c2ab44fad41881b8da21367a02da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">functionpointer to callback-function  <a href="#a0b8c2ab44fad41881b8da21367a02da4">More...</a><br /></td></tr>
@@ -604,7 +615,7 @@ false - publish failes </dd></dl>
 </div><div class="memdoc">
 
 <p>subsribes to MQTT topic on Server </p>
-<p>Checks if the Board is connected to a newtork and reconects if not Check if the client is connected to the server if not call <a class="el" href="">connectToMQTT()</a></p>
+<p>Checks if the Board is connected to a newtork and reconects if not Check if the client is connected to the server if not call connectToMQTT()</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">topic</td><td>- the topic to subscribe to (const char[]) </td></tr>
@@ -682,7 +693,7 @@ false - sending the unsubscribe failed, either connection lost, or message too l
 
 <p>functionpointer to callback-function </p>
 
-<p class="definition">Definition at line <a class="el" href="_m_q_t_t_communication_8h_source.html#l00262">262</a> of file <a class="el" href="_m_q_t_t_communication_8h_source.html">MQTTCommunication.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_m_q_t_t_communication_8h_source.html#l00260">260</a> of file <a class="el" href="_m_q_t_t_communication_8h_source.html">MQTTCommunication.h</a>.</p>
 
 </div>
 </div>
@@ -756,6 +767,8 @@ false - sending the unsubscribe failed, either connection lost, or message too l
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="classmy_m_q_t_t.html">myMQTT</a>(<a class="code" href="class_communication.html#aa6d4be2b35368ae426852d1cd2b03ef8">pHostname</a>,</div><div class="line">                            <a class="code" href="_communication_configuration_8h.html#a5d22797e1aecb523d51e001e4b18bfcd">DEFAULT_MQTT_BROKER_IP1</a>,</div><div class="line">                            <a class="code" href="_communication_configuration_8h.html#a3d7bfc12d81b39f60b4c466d73b0f9bd">DEFAULT_MQTT_BROKER_IP2</a>,</div><div class="line">                            <a class="code" href="_communication_configuration_8h.html#a5bef8a41df9bae6c18ba9a7cbe7334b1">DEFAULT_MQTT_BROKER_IP3</a>,</div><div class="line">                            <a class="code" href="_communication_configuration_8h.html#acd98270e14f470dde211dbf10ab236d5">DEFAULT_MQTT_BROKER_IP4</a>,</div><div class="line">                            <a class="code" href="_communication_configuration_8h.html#a01342056d524ed0b20f9e0ccc800d1db">DEFAULT_MQTT_PORT</a>)</div></div><!-- fragment -->
+<p>instance of <a class="el" href="classmy_m_q_t_t.html" title="Handels the MQTT connection.">myMQTT</a> </p>
+
 <p class="definition">Definition at line <a class="el" href="_m_q_t_t_communication_8h_source.html#l00253">253</a> of file <a class="el" href="_m_q_t_t_communication_8h_source.html">MQTTCommunication.h</a>.</p>
 
 </div>

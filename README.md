@@ -59,8 +59,6 @@ This Images also illustrates well the scalability of MQTT.
 For more Infos about MQTT and MQTT-Topics check out the MQTT-Wiki on [Github](https://github.com/mqtt/mqtt.github.io/wiki).   
 [Source: [Wiki:MQTT](https://en.wikipedia.org/wiki/MQTT), [MQTT](https://mqtt.org/) ]  
 
-<div style="page-break-after: always;"></div>
-
 ### Circular Buffer
 A Circular Buffer or a Ring-Buffer uses an buffer with fixed Size. If the Buffer is full the oldest Element gets overwritten.
 
@@ -125,8 +123,6 @@ struct myJSONStr {
     bool error = false;
 };
 ```
-<div style="page-break-after: always;"></div>
-
 ### FAQ's
 I'd like to use this code in my project. What do I need to know?  
 > All you need to do is at the GitHub-Link to this Repo under *lib_deps* in your platformio.ini File and your good to go. All dependencies are downloaded automatic.
