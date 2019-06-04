@@ -1,35 +1,37 @@
 # SmartFactory_MQTTCommunication
 
 The SmartFactroy_MQTTCommunication is an modular part of the SmartFactory Project.  
-It establishes a WLAN-Communication with an MQTT-Broker and allows you to send and receive Messages.
+MQTTCommunication establishes a WLAN-Connection and allows you to connect  
+with an MQTT-Broker to send and receive Message.  
+Incomming Messages need to be in an kown JSON-Format and  will be convertet into a Struct.  
+These Messages-Structs are stored in an Circular-Buffer.
 
 <!-- add Pagebreak in Print: <div style="page-break-after: always;"></div> -->
 
 ## Table of Content
 <!-- TOC Generated with https://magnetikonline.github.io/markdown-toc-generate/ -->
-
-- [Hardware](#hardware)
 - [Tools and Technologies](#tools-and-technologies)
    - [Doxygen](#doxygen)
    - [VSCode PlatformIO](#vscode-platformio)
    - [MQTT](#mqtt)
    - [Circular Buffer](#circular-buffer)
-- [Using SmartFactory_MQTTCommunication](#using-smartfactory_mqttcommunication)
-   - [Important Functions and Files](#important-functions-and-files)
-      - [MQTTCommunication.h](#mqttcommunicationh)
-      - [CommunicationConfiguration.h](#communicationconfigurationh)
-   - [myJSONStr.h](#myjsonstrh)
+- [Documentation](#documentation)
+   - [Hardware](#hardware)
+   - [Software](#software)
+      - [Dependency Graph](#dependency-graph)
+      - [Collaboration Diagram](#collaboration-diagram)
+      - [Important Functions and Files](#important-functions-and-files)
+         - [MQTTCommunication.h](#mqttcommunicationh)
+         - [CommunicationConfiguration.h](#communicationconfigurationh)
+         - [myJSONStr.h](#myjsonstrh)
    - [FAQ's](#faqs)
-   - [Dependencies](#dependencies)
+      - [I'd like to use this code in my project. What do I need to know?](#id-like-to-use-this-code-in-my-project-what-do-i-need-to-know)
+      - [Where can I change the configurations like MQTT-Broker IP and WLAN-Credentials?](#where-can-i-change-the-configurations-like-mqtt-broker-ip-and-wlan-credentials)
+      - [I'd like to change the incoming  JSON-Message. How can I do that?](#id-like-to-change-the-incoming--json-message-how-can-i-do-that)
    - [ToDo's](#todos)
    - [Contributors](#contributors)
    - [Changelog](#changelog)
 - [License](#license)
-
-
-## Hardware
-This Code needs a WLAN-Shield to function properly.  
-It's tested with an [Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500](https://www.adafruit.com/product/3010) from Adafruit.
 
 ## Tools and Technologies
 
@@ -66,14 +68,28 @@ A Circular Buffer or a Ring-Buffer uses an buffer with fixed Size. If the Buffer
 
 [Image: [Wiki: Circular buffer](https://en.wikipedia.org/wiki/Circular_buffer)]
 
-## Using SmartFactory_MQTTCommunication
-MQTTCommunication establishes a WLAN-Connection and allows you to connect  
-with an MQTT-Broker to send and receive Message.  
-Incomming Messages need to be in an kown JSON-Format and  will be convertet into a Struct.  
-These Structs are stored in an Circular-Buffer.
+# Documentation
+## Hardware
+This Code needs a WLAN-Shield to function properly.  
+It's tested with an [Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500](https://www.adafruit.com/product/3010) from Adafruit.
+
+## Software
+All functions and files are documented on the [GitHub-Page](https://lmazzole.github.io/SmartFactory_MQTTCommunication/)
+### Dependency Graph
+<img src="./docs/_m_q_t_t_communication_8h__incl.png" height="200"/>
+
+Extern Libraries:  
+* [PubSubClient](https://pubsubclient.knolleary.net/)
+* [WiFi101](https://www.arduino.cc/en/Reference/WiFi101)
+* [ArduinoJson](https://arduinojson.org/)
+* [CircularBuffer](https://github.com/rlogiacco/CircularBuffer)
+
+### Collaboration Diagram
+<img src="./docs/class_communication__coll__graph.png" height="150" />
+
 
 ### Important Functions and Files
-All functions and files are Documented on the [GitHub-Page](https://lmazzole.github.io/SmartFactory_MQTTCommunication/)
+
 #### MQTTCommunication.h  
 The *MQTTCommunication.h*-File serves as Interface.
 It provides the functions for:
@@ -123,21 +139,17 @@ struct myJSONStr {
     bool error = false;
 };
 ```
-### FAQ's
-I'd like to use this code in my project. What do I need to know?  
+## FAQ's
+#### I'd like to use this code in my project. What do I need to know?  
 > All you need to do is at the GitHub-Link to this Repo under *lib_deps* in your platformio.ini File and your good to go. All dependencies are downloaded automatic.
 
-Where can I change the configurations like MQTT-Broker IP and WLAN-Credentials?  
+#### Where can I change the configurations like MQTT-Broker IP and WLAN-Credentials?  
 > All the Configurationdata are stored in the *CommunicationConfiguration.h* file and can be edited there.
 
-I'd like to change the incoming  JSON-Message. How can I do that?  
+#### I'd like to change the incoming  JSON-Message. How can I do that?  
 > Incoming Messages need to be in an know JSON-Format which is defined in* myJSONStr.h* and needs to match the implementation in *myJSON::parsingJSONToStruct*. If you would like to change this Format you need to adapt both files.
 
-### Dependencies
-* [PubSubClient](https://pubsubclient.knolleary.net/)
-* [WiFi101](https://www.arduino.cc/en/Reference/WiFi101)
-* [ArduinoJson](https://arduinojson.org/)
-* [CircularBuffer](https://github.com/rlogiacco/CircularBuffer)
+
 
 ### ToDo's
 The open ToDo's can be fund in the Documenation on the [GitHub-Page](https://lmazzole.github.io/SmartFactory_MQTTCommunication/todo.html)
