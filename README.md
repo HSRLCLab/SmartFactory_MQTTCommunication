@@ -10,28 +10,25 @@ These Messages-Structs are stored in an Circular-Buffer.
 
 ## Table of Content
 <!-- TOC Generated with https://magnetikonline.github.io/markdown-toc-generate/ -->
-- [Tools and Technologies](#tools-and-technologies)
-   - [Doxygen](#doxygen)
-   - [VSCode PlatformIO](#vscode-platformio)
-   - [MQTT](#mqtt)
-   - [Circular Buffer](#circular-buffer)
-- [Documentation](#documentation)
-   - [Hardware](#hardware)
-   - [Software](#software)
-      - [Dependency Graph](#dependency-graph)
-      - [Collaboration Diagram](#collaboration-diagram)
-      - [Important Functions and Files](#important-functions-and-files)
-         - [MQTTCommunication.h](#mqttcommunicationh)
-         - [CommunicationConfiguration.h](#communicationconfigurationh)
-         - [myJSONStr.h](#myjsonstrh)
-   - [FAQ's](#faqs)
-      - [I'd like to use this code in my project. What do I need to know?](#id-like-to-use-this-code-in-my-project-what-do-i-need-to-know)
-      - [Where can I change the configurations like MQTT-Broker IP and WLAN-Credentials?](#where-can-i-change-the-configurations-like-mqtt-broker-ip-and-wlan-credentials)
-      - [I'd like to change the incoming  JSON-Message. How can I do that?](#id-like-to-change-the-incoming--json-message-how-can-i-do-that)
-   - [ToDo's](#todos)
-   - [Contributors](#contributors)
-   - [Changelog](#changelog)
-- [License](#license)
+[TOC]
+
+## The SmartFactory Project
+
+[SmartFactory_MQTTCommunication](https://github.com/LMazzole/SmartFactory_MQTTCommunication) is part of the SmartFactory-Project. It provides a library with basic MQTT-Communication functions.
+
+Other SmartFactory-Components are:
+* [SmartFactory_Box-Sortic](<https://github.com/LMazzole/SmartFactory_Box-Sortic>)
+
+A possible implementation of the SmartFactory-Project can be seen in the  Sortic-Showcase:
+
+<img src="./docs/images/RepoOverview.png" height="300"/>
+
+The associated  Repositorys are:  
+  [SmartFactory-Sortic](https://github.com/LMazzole/SmartFactory-Sortic)  
+  [SmartFactory_Box-Sortic](https://github.com/LMazzole/SmartFactory_Box-Sortic)  
+  [SmartFactory_Vehicle-Sortic](https://github.com/LMazzole/SmartFactory_Vehicle-Sortic)  
+  [SmartFactory_Vehicle-Basis](https://github.com/LMazzole/SmartFactory_Vehicle-Basis)  
+  [SmartFactory_MQTTCommunication](https://github.com/LMazzole/SmartFactory_MQTTCommunication)  
 
 ## Tools and Technologies
 
@@ -40,7 +37,7 @@ To achieve this project, the following listed tools and technologies were used.
 
 ### Doxygen
 Doxygen is used for the documentation of the sourcecode.  
-An intorduction to *Doxygen* and how to install it can be found [here](https://github.com/LMazzole/ArdFSM#howto-use-doxygen-in-vscode).  
+An intorduction to *Doxygen* and how to install it can be found in the [ArdFSM-Repo](https://github.com/LMazzole/ArdFSM#documentation-with-doxygen).  
 
 ### VSCode PlatformIO
 The used  IDE is [VSCode](https://code.visualstudio.com/) with the [PlatformIO](https://platformio.org/platformio-ide)-Extension.
@@ -74,7 +71,8 @@ This Code needs a WLAN-Shield to function properly.
 It's tested with an [Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500](https://www.adafruit.com/product/3010) from Adafruit.
 
 ## Software
-All functions and files are documented on the [GitHub-Page](https://lmazzole.github.io/SmartFactory_MQTTCommunication/)
+All functions and files are documented on the [GitHub-Page with Doxygen](https://lmazzole.github.io/SmartFactory_MQTTCommunication/)
+
 ### Dependency Graph
 <img src="./docs/_m_q_t_t_communication_8h__incl.png" height="200"/>
 
@@ -152,12 +150,14 @@ struct myJSONStr {
 
 
 ### ToDo's
-The open ToDo's can be fund in the Documenation on the [GitHub-Page](https://lmazzole.github.io/SmartFactory_MQTTCommunication/todo.html)
+The open ToDo's can be found in the Documentation on the [GitHub-Page](https://lmazzole.github.io/SmartFactory_MQTTCommunication/todo.html)
+- [ ] Split the Code in 2 Repos: MQTTCommunication-Sortic and MQTTCommunication in order to increase reusability.
 
-### Contributors
-[Luca Mazzoleni](https://github.com/LMazzole)
+## Contributors
+- [Luca Mazzoleni](https://github.com/LMazzole)
+- Luciano Bettinaglio
 
-### Changelog
+## Changelog
 V 1.0	-	Release BA FS19	-	[Luca Mazzoleni](https://github.com/LMazzole)
 
 ## License
