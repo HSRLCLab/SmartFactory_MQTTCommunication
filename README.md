@@ -10,7 +10,10 @@ These Messages-Structs are stored in a Circular-Buffer.
 
 ## Table of Content
 <!-- TOC Generated with https://magnetikonline.github.io/markdown-toc-generate/ -->
+
 [TOC]
+
+<div style="page-break-after: always;"></div>
 
 ## The SmartFactory Project
 
@@ -21,7 +24,7 @@ Other SmartFactory-Components are:
 
 A possible implementation of the SmartFactory-Project can be seen in the Sortic-Showcase:
 
-<img src="./docs/images/RepoOverview.png" height="300"/>
+<p align="center"><img src="./docs/images/RepoOverview.png" height="300"/></p>
 
 The associated  Repositorys are:  
   [SmartFactory-Sortic](https://github.com/LMazzole/SmartFactory-Sortic)  
@@ -29,6 +32,8 @@ The associated  Repositorys are:
   [SmartFactory_Vehicle-Sortic](https://github.com/LMazzole/SmartFactory_Vehicle-Sortic)  
   [SmartFactory_Vehicle-Basis](https://github.com/LMazzole/SmartFactory_Vehicle-Basis)  
   [SmartFactory_MQTTCommunication](https://github.com/LMazzole/SmartFactory_MQTTCommunication)  
+
+<div style="page-break-after: always;"></div>
 
 ## Tools and Technologies
 
@@ -46,24 +51,32 @@ The used IDE is [VSCode](https://code.visualstudio.com/) with the [PlatformIO](h
 MQTT (Message Queuing Telemetry Transport) is a lightweight publish-subscribe messaging protocol and requires a broker to relay the messages. It's used for M2M (machine-to-machine) communication.  
 An MQTT-System always consist of a broker and one or multiple clients, which can be either subscriber or publisher. 
 
-<img src="./docs/images/MQTTPublishSubscribe.png" height="300"/>   
+<p align="center"><img src="./docs/images/MQTTPublishSubscribe.png" height="300"/></p> 
 
 [Image: [MQTT101 - Eclispe Foundation](<https://www.eclipse.org/community/eclipse_newsletter/2014/october/article2.php>)]
 
 A Client can subscribe and publish to one or multiple Topics. Topics are organized in a Tree similar to a Folder-structure in Windows. Here's an example of how such a Topic-Tree and published message can look like:
 
-<img src="./docs/images/MQTTTopics.png" height="600"/> 
+<p align="center"><img src="./docs/images/MQTTTopics.png" height="600"/></p>
 
 This Images also illustrates the scalability of MQTT appropriately.  
 For more Infos about MQTT and MQTT-Topics check out the MQTT-Wiki on [Github](https://github.com/mqtt/mqtt.github.io/wiki).   
 [Source: [Wiki:MQTT](https://en.wikipedia.org/wiki/MQTT), [MQTT](https://mqtt.org/) ]  
 
+<div style="page-break-after: always;"></div>
+
 ### Circular Buffer
 A Circular Buffer or a Ring-Buffer uses an buffer with fixed Size. If the Buffer is full the oldest Element gets overwritten.
 
-<img src="./docs/images/Circular_Buffer_Animation.gif" height="300"/> 
+<p align="center">
+    <a href=https://en.wikipedia.org/wiki/Circular_buffer>
+        <img src="./docs/images/Circular_Buffer_Animation.gif" height="300" style="border:none;"/>
+    </a>
+</p>
 
 [Image: [Wiki: Circular buffer](https://en.wikipedia.org/wiki/Circular_buffer)]
+
+<div style="page-break-after: always;"></div>
 
 # Documentation
 ## Hardware
@@ -74,7 +87,13 @@ It's tested with a [Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500](https://ww
 All functions and files are documented on the [GitHub-Page with Doxygen](https://lmazzole.github.io/SmartFactory_MQTTCommunication/)
 
 ### Dependency Graph
-<img src="./docs/_m_q_t_t_communication_8h__incl.png" height="200"/>
+
+<p align="center">
+    <a href=https://lmazzole.github.io/SmartFactory_MQTTCommunication/_m_q_t_t_communication_8h.html>
+        <img src="./docs/_m_q_t_t_communication_8h__incl.png" height="200" style="border:none;"/>
+    </a>
+    <p align="center"><small>Click on the image to open doxygen-documentation.</p>
+</p>
 
 External Libraries:  
 * [PubSubClient](https://pubsubclient.knolleary.net/)
@@ -83,8 +102,15 @@ External Libraries:
 * [CircularBuffer](https://github.com/rlogiacco/CircularBuffer)
 
 ### Collaboration Diagram
-<img src="./docs/class_communication__coll__graph.png" height="150" />
 
+<p align="center">
+    <a href=https://lmazzole.github.io/SmartFactory_MQTTCommunication/class_communication.html>
+        <img src="./docs/class_communication__coll__graph.png" height="150" style="border:none;"/>
+    </a>
+    <p align="center"><small>Click on the image to open doxygen-documentation.</p>
+</p>
+
+<div style="page-break-after: always;"></div>
 
 ### Important Functions and Files
 
@@ -137,6 +163,9 @@ struct myJSONStr {
     bool error = false;
 };
 ```
+
+<div style="page-break-after: always;"></div>
+
 ## FAQ's
 #### I'd like to use this code in my project. What do I need to know?  
 > All you need to do is add the GitHub-Link to this Repo under *lib_deps* in your platformio.ini File and you're set up. All dependencies are downloaded automatic.
@@ -146,7 +175,6 @@ struct myJSONStr {
 
 #### I'd like to change the incoming JSON-Message. How can I do that?  
 > Incoming messages need to be in a know JSON-Format which is defined in* myJSONStr.h* and needs to match the implementation in *myJSON::parsingJSONToStruct*. If you would like to change this format you need to adapt both files.
-
 
 
 ### ToDo's
