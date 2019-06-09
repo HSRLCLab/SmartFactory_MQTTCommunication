@@ -99,16 +99,6 @@ $(document).ready(function(){initNavTree('class_communication.html','');});
  <a href="class_communication.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_m_q_t_t_communication_8h_source.html">MQTTCommunication.h</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Communication:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_communication__coll__graph.png" border="0" usemap="#_communication_coll__map" alt="Collaboration graph"/></div>
-<map name="_communication_coll__map" id="_communication_coll__map">
-<area shape="rect"  title="The Connection&#45;class provides the interface." alt="" coords="32,95,144,121"/>
-<area shape="rect"  href="class_network.html" title="Handels the WLAN&#45;Connection." alt="" coords="5,5,75,32"/>
-<area shape="rect"  href="classmy_m_q_t_t.html" title="Handels the MQTT connection." alt="" coords="99,5,173,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -197,7 +187,7 @@ Private Attributes</h2></td></tr>
 
 <p>Construct a new <a class="el" href="class_communication.html" title="The Connection-class provides the interface.">Communication</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="_m_q_t_t_communication_8cpp_source.html#l00081">81</a> of file <a class="el" href="_m_q_t_t_communication_8cpp_source.html">MQTTCommunication.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_m_q_t_t_communication_8cpp_source.html#l00080">80</a> of file <a class="el" href="_m_q_t_t_communication_8cpp_source.html">MQTTCommunication.cpp</a>.</p>
 
 </div>
 </div>
@@ -255,7 +245,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Retriev data from the Head (newest Element) of the Buffer. </p>
-<p>This operation is non destructiv and the element will NOT be removed from the buffer Reading from an empty buffer is forbidden!! </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="structmy_j_s_o_n_str.html">myJSONStr</a> - The Element at the Head </dd></dl>
+<p>This operation is non destructiv and the element will NOT be removed from the buffer Reading from an empty buffer is forbidden!! </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="structmy_j_s_o_n_str.html" title="myJSON Struct defines the format of the messages">myJSONStr</a> - The Element at the Head </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_m_q_t_t_communication_8h_source.html#l00213">213</a> of file <a class="el" href="_m_q_t_t_communication_8h_source.html">MQTTCommunication.h</a>.</p>
 
@@ -292,7 +282,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structmy_j_s_o_n_str.html">myJSONStr</a> - </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structmy_j_s_o_n_str.html" title="myJSON Struct defines the format of the messages">myJSONStr</a> - </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_m_q_t_t_communication_8h_source.html#l00181">181</a> of file <a class="el" href="_m_q_t_t_communication_8h_source.html">MQTTCommunication.h</a>.</p>
 
@@ -383,7 +373,7 @@ false - if data is stored in the buffer </dd></dl>
 </div><div class="memdoc">
 
 <p>Retriev data from the Tail (oldest Element) of the Buffer. </p>
-<p>This operation is non destructiv and the element will NOT be removed from the buffer Reading from an empty buffer is forbidden!! </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="structmy_j_s_o_n_str.html">myJSONStr</a> - The Element at the Tail </dd></dl>
+<p>This operation is non destructiv and the element will NOT be removed from the buffer Reading from an empty buffer is forbidden!! </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="structmy_j_s_o_n_str.html" title="myJSON Struct defines the format of the messages">myJSONStr</a> - The Element at the Tail </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_m_q_t_t_communication_8h_source.html#l00171">171</a> of file <a class="el" href="_m_q_t_t_communication_8h_source.html">MQTTCommunication.h</a>.</p>
 
@@ -445,7 +435,7 @@ false - the client is no longer connected </dd></dl>
 </div><div class="memdoc">
 
 <p>Retriev data from the Tail (oldest Element) of the Buffer. </p>
-<p>Cause the element being read to be removed from the buffer Reading from an empty buffer is forbidden!! </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="structmy_j_s_o_n_str.html">myJSONStr</a> - The Element at the Tail </dd></dl>
+<p>Cause the element being read to be removed from the buffer Reading from an empty buffer is forbidden!! </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="structmy_j_s_o_n_str.html" title="myJSON Struct defines the format of the messages">myJSONStr</a> - The Element at the Tail </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_m_q_t_t_communication_8h_source.html#l00192">192</a> of file <a class="el" href="_m_q_t_t_communication_8h_source.html">MQTTCommunication.h</a>.</p>
 
@@ -554,7 +544,7 @@ false - publish failes </dd></dl>
 </div><div class="memdoc">
 
 <p>Retriev data from the Head (newest Element) of the Buffer. </p>
-<p>Cause the element being read to be removed from the buffer Reading from an empty buffer is forbidden!! </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="structmy_j_s_o_n_str.html">myJSONStr</a> - The Element at the Head </dd></dl>
+<p>Cause the element being read to be removed from the buffer Reading from an empty buffer is forbidden!! </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="structmy_j_s_o_n_str.html" title="myJSON Struct defines the format of the messages">myJSONStr</a> - The Element at the Head </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_m_q_t_t_communication_8h_source.html#l00223">223</a> of file <a class="el" href="_m_q_t_t_communication_8h_source.html">MQTTCommunication.h</a>.</p>
 

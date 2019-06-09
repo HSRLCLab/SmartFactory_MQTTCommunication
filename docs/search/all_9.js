@@ -1,7 +1,17 @@
 var searchData=
 [
-  ['last',['last',['../class_communication.html#a699d7c382d121bd4c0bd74687363315d',1,'Communication']]],
-  ['lastmessage',['lastMessage',['../classmy_j_s_o_n.html#ace499de7665ab481672fb942788955c9',1,'myJSON']]],
-  ['line',['line',['../structmy_j_s_o_n_str.html#ad3c04a3cb9e92d80d2719a76169b97fb',1,'myJSONStr']]],
-  ['loop',['loop',['../class_communication.html#a751d7d863cb0d5a93cd3490012984c55',1,'Communication::loop()'],['../classmy_m_q_t_t.html#a16792912f95306c1de19dd10d9ee9d87',1,'myMQTT::loop()']]]
+  ['max_5fjson_5fmessages_5fsaved',['MAX_JSON_MESSAGES_SAVED',['../_communication_configuration_8h.html#acf4afb55aa7d1288ad9dffc623360a8c',1,'CommunicationConfiguration.h']]],
+  ['max_5fjson_5fparse_5fsize',['MAX_JSON_PARSE_SIZE',['../_communication_configuration_8h.html#a268cecf8b27e3323864627d776dee31d',1,'CommunicationConfiguration.h']]],
+  ['mqttcommunication_2ecpp',['MQTTCommunication.cpp',['../_m_q_t_t_communication_8cpp.html',1,'']]],
+  ['mqttcommunication_2eh',['MQTTCommunication.h',['../_m_q_t_t_communication_8h.html',1,'']]],
+  ['mqttconnectionfailed',['MQTTConnectionFailed',['../classmy_m_q_t_t.html#a260a10a835dc83e7268bc901c5a45a00',1,'myMQTT']]],
+  ['myjson',['myJSON',['../classmy_j_s_o_n.html',1,'myJSON'],['../classmy_j_s_o_n.html#a895059270e63b6b2ad9c292cb9ecb861',1,'myJSON::myJSON()']]],
+  ['myjson_2ecpp',['myJSON.cpp',['../my_j_s_o_n_8cpp.html',1,'']]],
+  ['myjson_2eh',['myJSON.h',['../my_j_s_o_n_8h.html',1,'']]],
+  ['myjsonstr',['myJSONStr',['../structmy_j_s_o_n_str.html',1,'']]],
+  ['myjsonstr_2eh',['myJSONStr.h',['../my_j_s_o_n_str_8h.html',1,'']]],
+  ['mymqtt',['myMQTT',['../classmy_m_q_t_t.html',1,'myMQTT'],['../classmy_m_q_t_t.html#a279474d24c098fcf26a6d433bf794160',1,'myMQTT::myMQTT()']]],
+  ['mymqtt_2ecpp',['myMQTT.cpp',['../my_m_q_t_t_8cpp.html',1,'']]],
+  ['mymqtt_2eh',['myMQTT.h',['../my_m_q_t_t_8h.html',1,'']]],
+  ['mymqttclient',['myMQTTclient',['../classmy_m_q_t_t.html#a3a747c468141e67bcd20c955850e142d',1,'myMQTT']]]
 ];

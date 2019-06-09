@@ -26,7 +26,6 @@ var NAVTREE =
   [ "MQTT Communication", "index.html", [
     [ "SmartFactory_MQTTCommunication", "md__v_1__git__smart_factory__m_q_t_t_communication__r_e_a_d_m_e.html", null ],
     [ "Todo List", "todo.html", null ],
-    [ "Bug List", "bug.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

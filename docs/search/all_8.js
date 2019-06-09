@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['id',['id',['../structmy_j_s_o_n_str.html#a78a5f8711dd64c450d7f01d6a5c337fa',1,'myJSONStr']]],
-  ['init',['init',['../class_communication.html#aa526fb8aa735ea4457dc56d1f0a4fe00',1,'Communication::init()'],['../classmy_m_q_t_t.html#a5f19e4308e3dc2d748291d3ca1cd9228',1,'myMQTT::init()'],['../class_network.html#a92193e6fe7a1dc2c7a42d9c9cfed81ed',1,'Network::init()']]],
-  ['isempty',['isEmpty',['../class_communication.html#ada2063efe2e5667c4317319c2e91ccd3',1,'Communication']]]
+  ['last',['last',['../class_communication.html#a699d7c382d121bd4c0bd74687363315d',1,'Communication']]],
+  ['lastmessage',['lastMessage',['../classmy_j_s_o_n.html#ace499de7665ab481672fb942788955c9',1,'myJSON']]],
+  ['line',['line',['../structmy_j_s_o_n_str.html#ad3c04a3cb9e92d80d2719a76169b97fb',1,'myJSONStr']]],
+  ['loop',['loop',['../class_communication.html#a751d7d863cb0d5a93cd3490012984c55',1,'Communication::loop()'],['../classmy_m_q_t_t.html#a16792912f95306c1de19dd10d9ee9d87',1,'myMQTT::loop()']]]
 ];

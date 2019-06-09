@@ -34,8 +34,8 @@ myJSONStr myJSON::parsingJSONToStruct(const char* json) {
          * https://arduinojson.org/v6/doc/deserialization/ S67
          */
 
-        tempStr.id = doc["id"].as<String>();  // "SV46465"
-        tempStr.status = doc["status"].as<String>();
+        tempStr.id = doc["id"].as<String>();          // "SV46465"
+        tempStr.status = doc["status"].as<String>();  // "driving"
         tempStr.sector = doc["sector"].as<String>();  // "sector"
         tempStr.line = doc["line"].as<int>();         // 1
         tempStr.ack = doc["ack"].as<String>();        // "hostname"

@@ -22,13 +22,12 @@ https://assetwolf.com/learn/sending-data-from-arduino-to-cloud
 #include "MQTTCommunication.h"
 
 //==Global Vairable====
-myJSON _myjson(MAX_JSON_PARSE_SIZE);                                              ///< instance of myJSON
+myJSON _myjson(MAX_JSON_PARSE_SIZE);                         ///< instance of myJSON
 CircularBuffer<myJSONStr, MAX_JSON_MESSAGES_SAVED> _buffer;  ///< instance of CircularBuffer
 
 //======Func====
 /**
- * @todo String is inefficient -> change to char array and handle pointer
- * @todo Change global implementation
+ * @todo Change global implementation of callback. Maybe with static?
  */
 void callback(char* topic, byte* payload, unsigned int length) {
     DBFUNCCALLln("callback(const char[] topic, byte* payload, unsigned int length)");
@@ -78,6 +77,6 @@ void callback(char* topic, byte* payload, unsigned int length) {
     }
 }
 
-Communication::Communication(String Hostname) : pHostname(Hostname){
+Communication::Communication(String Hostname) : pHostname(Hostname) {
     init();
 }

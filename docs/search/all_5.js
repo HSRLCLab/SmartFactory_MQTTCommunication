@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['error',['error',['../structmy_j_s_o_n_str.html#a47cc65fe9a93c0436c7c1f977be884db',1,'myJSONStr']]]
+  ['first',['first',['../class_communication.html#ab188e8647d1b8abba12dba6101fe4096',1,'Communication']]],
+  ['funcpointer',['funcPointer',['../class_communication.html#a0b8c2ab44fad41881b8da21367a02da4',1,'Communication']]]
 ];

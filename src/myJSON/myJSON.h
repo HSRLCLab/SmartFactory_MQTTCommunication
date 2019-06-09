@@ -34,18 +34,6 @@ class myJSON {
     myJSON(const size_t ParsCapacity);
 
     /**
-     * @brief Checks if to Structs of the Typ myJSONstr are equal
-     * 
-     * @bug changes the String in Name when called in callback
-     * 
-     * @param lhs - Struct 1
-     * @param rhs - Struct 1
-     * @return true - if equal
-     * @return false - if not equal
-     */
-    bool StructIsEqual(const myJSONStr& lhs, const myJSONStr& rhs);
-
-    /**
      * @brief Parsing JSON-Format into myJSONStr
      * 
      * Populates myJsonStr from a string. If an error occures, the default myJsonStr is returned.
@@ -57,7 +45,7 @@ class myJSON {
     myJSONStr parsingJSONToStruct(const char* json);
 
     // String serialize(myJSONStr tempStr);
-    String lastMessage = "init";
+    String lastMessage = "init";  //lastMessage is used to store the last received message
 
    private:
     const size_t pParsCapacity;
