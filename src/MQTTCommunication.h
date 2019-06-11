@@ -94,7 +94,12 @@ class Communication {
      * @return true - he client is still connected
      * @return false - the client is no longer connected
      */
-    inline bool loop() {
+    bool loop() {
+        if (!pMymqtt.loop()) {
+            pNetwork.connectToWiFi();
+        } else {
+            return true;
+        }
         return pMymqtt.loop();
     }
 

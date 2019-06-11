@@ -108,7 +108,7 @@ void myMQTT::connectToMQTT() {
         } else {
             MQTTConnectionFailed();
             DBINFO3ln("trying again in 3 seconds");
-            delay(3000);
+            delay(5);
         }
     }
 }

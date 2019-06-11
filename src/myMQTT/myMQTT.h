@@ -98,9 +98,14 @@ class myMQTT {
      * @return true - he client is still connected
      * @return false - the client is no longer connected
      */
-    inline bool loop() {
+    bool loop() {
+        if (!myMQTTclient.loop()) {
+            connectToMQTT();
+        } else {
+            return true;
+        }
         return myMQTTclient.loop();
-    };
+    }
 
     //=====PRIVATE====================================================================================
    private:
